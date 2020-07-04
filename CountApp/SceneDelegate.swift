@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 
         print(UserDefaults.standard.object(forKey: "saveContent") as Any)
-        if UserDefaults.standard.object(forKey: "saveContent") != nil {
+        if UserDefaults.standard.object(forKey: "saveContent") == nil {
             changeRootView()
         }
         //画面遷移させたい部分に以下の処理を記述
@@ -49,16 +49,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     }
     
-    /// ルートViewの変更
+     /// ルートViewの変更
      func changeRootView() {
         //利用するストーリーボードを指定
         let storyboard:UIStoryboard =  UIStoryboard(name: "Main",bundle:nil)
         // storyboard ID で遷移先コントローラーを変更(ナビゲーションコントローラー使ってない場合)
         let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: targetViewController) as UIViewController
+        
+        let navigationController : UINavigationController = self.window?.rootViewController as! UINavigationController
         window?.rootViewController = viewController
         // 表示
-        self.window?.makeKeyAndVisible()
+//        self.window?.makeKeyAndVisible()
     }
+    
+//     /// ルートViewの変更
+//     func changeRootView() {
+//        //利用するストーリーボードを指定
+//        let storyboard:UIStoryboard =  UIStoryboard(name: "Main",bundle:nil)
+//
+//
+//        // storyboard ID で遷移先コントローラーを変更(ナビゲーションコントローラー使っている場合)
+//        let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: targetViewController) as UIViewController
+//
+//        let navigationController: UINavigationController = self.window!.rootViewController as! UINavigationController
+//
+//        navigationController.pushViewController(viewController, animated: false)
+//    }
+    
 
     func sceneDidDisconnect(_ scene: UIScene) {
         
