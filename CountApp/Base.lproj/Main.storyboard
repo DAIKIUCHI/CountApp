@@ -10,7 +10,7 @@
         <!--目標設定-->
         <scene sceneID="kZI-N0-FIf">
             <objects>
-                <viewController storyboardIdentifier="RegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ViZ-in-oRA" customClass="RegisterViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ViZ-in-oRA" customClass="RegisterViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N0l-uX-Q2j">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,7 +32,7 @@
             </objects>
             <point key="canvasLocation" x="1500.0000000000002" y="-305.35714285714283"/>
         </scene>
-        <!--Main View Controller-->
+        <!--あああ-->
         <scene sceneID="bTT-Sy-fqD">
             <objects>
                 <viewController id="jlo-sG-aCu" customClass="MainViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -51,7 +51,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="JUa-GF-smi"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ATC-KW-aCP"/>
+                    <navigationItem key="navigationItem" title="あああ" id="ATC-KW-aCP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZr-gr-xoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -79,7 +79,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Ex8-P0-dbR">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q5L-2D-21R" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RegisterViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q5L-2D-21R" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VwY-lu-Vcc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
