@@ -14,6 +14,8 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var countTextField: UITextField!
     @IBOutlet weak var receivedTargetTextLabel: UILabel!
     
+    
+    
     var targetStirng = String()
     
     let dataList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
@@ -27,10 +29,18 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countTextField.delegate = self
         
         receivedTargetTextLabel.text = targetStirng
+        
+        countTextField.text = dataList[0]
 
         // Do any additional setup after loading the view.
     }
-        
+    
+    
+    @IBAction func targetDecisionAction(_ sender: Any) {
+        UserDefaults.standard.set(receivedTargetTextLabel.text, forKey: "target")
+        UserDefaults.standard.set(countTextField.text, forKey: "count")
+    }
+    
     // UIPickerViewの列の数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -57,7 +67,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
         
-    //MARK - UITextField Delegates
+    //入力制限（数字のみ）
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         //For mobile numer validation

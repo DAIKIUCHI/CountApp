@@ -17,17 +17,14 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
 
-        
         //外枠の色
         stopSnackingButton.layer.borderColor = rgba.cgColor
         //外枠の太さ
         stopSnackingButton.layer.borderWidth = 2.0
         //角丸
-        stopSnackingButton.layer.cornerRadius = 3.0
+        stopSnackingButton.layer.cornerRadius = 5.0
 
-        
     }
     
     

@@ -16,47 +16,31 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
-        
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else {
             return
         }
-        
 
         print(UserDefaults.standard.object(forKey: "saveContent") as Any)
+        print(UserDefaults.standard.object(forKey: "target") as Any)
+        print(UserDefaults.standard.object(forKey: "count") as Any)
+        
         if UserDefaults.standard.object(forKey: "saveContent") != nil {
             changeRootView()
         }
-        //画面遷移させたい部分に以下の処理を記述
-        //　windowを生成
-//        self.window = UIWindow(frame: UIScreen.main.bounds)
-        //　Storyboardを指定
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        print(storyboard)
-//        // Viewcontrollerを指定
-//        let initialViewController = storyboard.instantiateViewController(withIdentifier: "loginViewController")
-//        print(initialViewController)
-//        // rootViewControllerに入れる
-//        self.window?.rootViewController = initialViewController
-//        // 表示
-//        self.window?.makeKeyAndVisible()
-        
-        
-        
-//        changeRootView()
 
     }
     
      /// ルートViewの変更
      func changeRootView() {
         //利用するストーリーボードを指定
-        let storyboard:UIStoryboard =  UIStoryboard(name: "Main",bundle:nil)
+        let storyboard: UIStoryboard =  UIStoryboard(name: "Main",bundle:nil)
         // storyboard ID で遷移先コントローラーを変更(ナビゲーションコントローラー使ってない場合)
-        let viewController : UIViewController = storyboard.instantiateViewController(withIdentifier: targetViewController) as UIViewController
+        let viewController: UIViewController = storyboard.instantiateViewController(withIdentifier: targetViewController) as UIViewController
         
-        let navigationController : UINavigationController = self.window?.rootViewController as! UINavigationController
+        let navigationController: UINavigationController = self.window?.rootViewController as! UINavigationController
         window?.rootViewController = viewController
         // 表示
 //        self.window?.makeKeyAndVisible()

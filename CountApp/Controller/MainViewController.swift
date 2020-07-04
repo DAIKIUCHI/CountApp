@@ -10,19 +10,23 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    
+
+    @IBOutlet weak var targetTextLabel: UILabel!
+    @IBOutlet weak var countTextLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        targetTextLabel.text = (UserDefaults.standard.object(forKey: "target") as! String)
+        countTextLabel.text = (UserDefaults.standard.object(forKey: "count") as! String)
 
         // Do any additional setup after loading the view.
     }
     
     
+    //画面遷移操作用※あとで消すやつ
     func save() {
-        
         UserDefaults.standard.set("保存", forKey: "saveContent")
-        
     }
 
     /*
