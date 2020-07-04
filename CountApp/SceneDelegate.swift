@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
 
         print(UserDefaults.standard.object(forKey: "saveContent") as Any)
-        if UserDefaults.standard.object(forKey: "saveContent") != nil {
+        if UserDefaults.standard.object(forKey: "saveContent") == nil {
             changeRootView()
         }
         //画面遷移させたい部分に以下の処理を記述
