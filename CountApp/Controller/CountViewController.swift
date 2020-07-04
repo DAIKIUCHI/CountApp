@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     @IBOutlet weak var countPickerView: UIPickerView!
     @IBOutlet weak var countTextField: UITextField!
@@ -22,6 +22,8 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         //delegate設定
         countPickerView.delegate = self
         countPickerView.dataSource = self
+        countTextField.delegate = self
+        
 
         // Do any additional setup after loading the view.
     }
@@ -51,6 +53,19 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countTextField.text = dataList[row]
     }
     
+    
+    //MARK - UITextField Delegates
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        
+        //For mobile numer validation
+        if textField == countTextField {
+            let allowedCharacters = CharacterSet(charactersIn:"+0123456789 ")//Here change this characters based on your requirement
+            let characterSet = CharacterSet(charactersIn: string)
+            return allowedCharacters.isSuperset(of: characterSet)
+        }
+        return true
+        
+    }
 
     /*
     // MARK: - Navigation
