@@ -9,6 +9,8 @@
 import UIKit
 
 class RegisterViewController: UIViewController {
+    
+    @IBOutlet weak var targetTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,7 +18,13 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func stopSnackingAction(_ sender: Any) {
+        
+        targetTextField.text = "間食を制限する"
+        
+    }
+    
     /*
     // MARK: - Navigation
 
