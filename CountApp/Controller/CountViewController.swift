@@ -12,9 +12,11 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var countPickerView: UIPickerView!
     @IBOutlet weak var countTextField: UITextField!
+    @IBOutlet weak var receivedTargetTextLabel: UILabel!
+    
+    var targetStirng = String()
     
     let dataList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,10 +26,11 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countPickerView.dataSource = self
         countTextField.delegate = self
         
+        receivedTargetTextLabel.text = targetStirng
 
         // Do any additional setup after loading the view.
     }
-    
+        
     // UIPickerViewの列の数
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -53,7 +56,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countTextField.text = dataList[row]
     }
     
-    
+        
     //MARK - UITextField Delegates
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         

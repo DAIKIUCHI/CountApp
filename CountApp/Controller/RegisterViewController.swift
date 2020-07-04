@@ -18,14 +18,15 @@ class RegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        
         //外枠の色
         stopSnackingButton.layer.borderColor = rgba.cgColor
-        
         //外枠の太さ
         stopSnackingButton.layer.borderWidth = 2.0
-        
         //角丸
         stopSnackingButton.layer.cornerRadius = 3.0
+
         
     }
     
@@ -35,6 +36,35 @@ class RegisterViewController: UIViewController {
         targetTextField.text = "間食を制限する"
         
     }
+    
+    
+    //CountViewControllerへ画面遷移
+    @IBAction func nextAction(_ sender: Any) {
+        performSegue(withIdentifier: "count", sender: nil)
+    }
+    
+    //値を渡す
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "count" {
+            let countVC: CountViewController = segue.destination as! CountViewController
+            countVC.targetStirng = targetTextField.text!
+        }
+    }
+    
+//    // Segue 準備
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//
+//       if (segue.identifier == "count") {
+//            let countVC: CountViewController = segue.destination as! CountViewController
+//
+//            //UIImage型の画像を入れる
+//            subVC.passImage = saveImage
+//
+//
+//        }
+//    }
+
+    
     
     /*
     // MARK: - Navigation
