@@ -10,21 +10,49 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-
     @IBOutlet weak var targetTextLabel: UILabel!
     @IBOutlet weak var countTextLabel: UILabel!
+    
+    /* --  カウント表示用のテキストラベル  -- */
+    @IBOutlet weak var progress: UILabel!
+    @IBOutlet weak var slash: UILabel!
+    @IBOutlet weak var setValue: UILabel!
     
     //countCircle()のインクリメント用
     var i:Double = 1.0
     //円の終わりの位置指定のための計算用変数
     var circleEnd:Double =  0.0
     
+    //進捗カウントのインクリメント用
+    var j:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         targetTextLabel.text = (UserDefaults.standard.object(forKey: "target") as! String)
-        countTextLabel.text = (UserDefaults.standard.object(forKey: "count") as! String)
+        setValue.text = (UserDefaults.standard.object(forKey: "count") as! String)
+        progress.text = String(j)
         
+        circle()
+
+    }
+    
+    
+    /* -- 画面遷移操作用※あとで消すやつ -- */
+    func save() {
+        UserDefaults.standard.set("保存", forKey: "saveContent")
+    }
+    /* -- ------------------------ -- */
+
+    //カウントボタンの処理
+    @IBAction func countTapAction(_ sender: Any) {
+        countCircle()
+        j += 1
+        progress.text = String(j)
+    }
+    
+    //円を描画
+    func circle() {
         //背景色設定
         self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
         //初期化
@@ -54,18 +82,7 @@ class MainViewController: UIViewController {
                                             endAngle: endAngle,
                                             clockwise: true).cgPath
         self.view.layer.addSublayer(shapeLayer)
-    }
-    
-    
-    /* -- 画面遷移操作用※あとで消すやつ -- */
-    func save() {
-        UserDefaults.standard.set("保存", forKey: "saveContent")
-    }
-    /* -- ------------------------ -- */
-
-    //カウントボタンの処理
-    @IBAction func countTapAction(_ sender: Any) {
-        countCircle()
+        textAddsubView()
     }
     
     //カウント回数を表す円
@@ -107,7 +124,15 @@ class MainViewController: UIViewController {
                                            endAngle: endAngle,
                                            clockwise: true).cgPath
         self.view.layer.addSublayer(shapeLayer)
-
+        textAddsubView()
+    }
+    
+    
+    //テキストフィールドを円より前面に表示
+    func textAddsubView() {
+        self.view.addSubview(progress)
+        self.view.addSubview(slash)
+        self.view.addSubview(setValue)
     }
 
     /*
