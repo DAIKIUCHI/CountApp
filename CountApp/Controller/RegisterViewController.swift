@@ -20,6 +20,9 @@ class RegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //背景色設定
+        self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
 
         //外枠の色
         stopSnackingButton.layer.borderColor = rgba.cgColor

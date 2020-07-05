@@ -29,6 +29,9 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countPickerView.dataSource = self
         countTextField.delegate = self
         
+        //背景色設定
+        self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        
         receivedTargetTextLabel.text = targetStirng
         
         countTextField.text = dataList[0]
