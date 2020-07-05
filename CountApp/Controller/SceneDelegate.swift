@@ -23,11 +23,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
 
-        print(UserDefaults.standard.object(forKey: "saveContent") as Any)
+//        print(UserDefaults.standard.object(forKey: "saveContent") as Any)
+        print("-----------目標-------------")
         print(UserDefaults.standard.object(forKey: "target") as Any)
+        print("-----------回数-------------")
         print(UserDefaults.standard.object(forKey: "count") as Any)
         
-        if UserDefaults.standard.object(forKey: "saveContent") != nil {
+        //目標が入っていない時は目標設定画面から表示させる
+        if UserDefaults.standard.object(forKey: "target") == nil {
             changeRootView()
         }
 
@@ -40,7 +43,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // storyboard ID で遷移先コントローラーを変更(ナビゲーションコントローラー使ってない場合)
         let viewController: UIViewController = storyboard.instantiateViewController(withIdentifier: targetViewController) as UIViewController
         
-        let navigationController: UINavigationController = self.window?.rootViewController as! UINavigationController
+        let _: UINavigationController = self.window?.rootViewController as! UINavigationController
         window?.rootViewController = viewController
         // 表示
 //        self.window?.makeKeyAndVisible()

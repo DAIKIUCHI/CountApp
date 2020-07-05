@@ -24,19 +24,35 @@ class MainViewController: UIViewController {
     var circleEnd:Double =  0.0
     
     //進捗カウントのインクリメント用
-    var j:Int = 0
+    var j = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         targetTextLabel.text = (UserDefaults.standard.object(forKey: "target") as! String)
-        setValue.text = (UserDefaults.standard.object(forKey: "count") as! String)
-        progress.text = String(j)
+        setValue.text = UserDefaults.standard.string(forKey: "count")
+        progress.text = UserDefaults.standard.string(forKey: "j")
         
         circle()
-
+        countCircle()
+//        print(j)
+        
+        // progressラベルがnilのときは"0"を表示させる
+        if progress.text == nil {
+            progress.text = "0"
+        }
+        
+//        print(UserDefaults.standard.integer(forKey: "j"))
+//        print(progress.text as Any)
+        
+//        progress.text = UserDefaults.standard.string(forKey: "j")
+        j = UserDefaults.standard.integer(forKey: "j")
+        print("----------viewdidload------------")
+        print(UserDefaults.standard.integer(forKey: "j"))
+        print(j)
+ 
+        
     }
-    
     
     /* -- 画面遷移操作用※あとで消すやつ -- */
     func save() {
@@ -46,9 +62,11 @@ class MainViewController: UIViewController {
 
     //カウントボタンの処理
     @IBAction func countTapAction(_ sender: Any) {
-        countCircle()
         j += 1
         progress.text = String(j)
+        UserDefaults.standard.set(j, forKey: "j")
+        countCircle()
+        //countCircle()の計算用変数iを保存しておく
     }
     
     //円を描画
@@ -61,8 +79,8 @@ class MainViewController: UIViewController {
         let circleSize:CGFloat = view.bounds.width / 2
         /* --- xの位置 -> (ビューの幅 -  円の大きさ) / 2 = 円の左端の位置（画面の中央に描画できる）--- */
         let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
-        print(self.view.bounds.height)
-        print((self.view.bounds.height - circleSize) / 2)
+//        print(self.view.bounds.height)
+//        print((self.view.bounds.height - circleSize) / 2)
         shapeLayer.frame = shapeFrame
         
         /* --- 円を描画 --- */
@@ -110,12 +128,17 @@ class MainViewController: UIViewController {
 
         //円の終わりの位置指定のための計算用変数(360°/"count")
         circleEnd = UserDefaults.standard.double(forKey: "count")
+        j = UserDefaults.standard.integer(forKey: "j")
+        
+        print("---------circleEnd------------")
         print(circleEnd)
-        //Double.piの0°が3時。よって270°は12時。12時から開始したいので270を足した後にcountを割る
-        let endAngle: CGFloat = CGFloat(Double.pi * 2.0 * (270 + (360 / circleEnd) * i) / 360.0)
-
-        i += 1.0
+        print("---------j:Int------------")
+        print(j)
+        print("---------i:Double------------")
         print(i)
+
+        //Double.piの0°が3時。よって270°は12時。12時から開始したいので270を足した後にcountを割る
+        let endAngle: CGFloat = CGFloat(Double.pi * 2.0 * (270 + (360 / circleEnd) * Double(j)) / 360.0)
 
         // 円弧を描画
         shapeLayer.path = UIBezierPath.init(arcCenter: CGPoint.init(x: shapeFrame.size.width / 2.0, y: shapeFrame.size.height / 2.0),
@@ -134,7 +157,18 @@ class MainViewController: UIViewController {
         self.view.addSubview(slash)
         self.view.addSubview(setValue)
     }
-
+    
+    
+    @IBAction func del(_ sender: Any) {
+        
+        UserDefaults.standard.removeObject(forKey: "target")
+        UserDefaults.standard.removeObject(forKey: "count")
+        UserDefaults.standard.removeObject(forKey: "j")
+        UserDefaults.standard.removeObject(forKey: "i")
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
