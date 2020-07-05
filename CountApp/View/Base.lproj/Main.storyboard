@@ -32,7 +32,9 @@
                                 <rect key="frame" x="62" y="342" width="290" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="間食の回数を制限する"/>
+                                <state key="normal" title="間食の回数を制限する">
+                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="stopSnackingAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="JcO-0V-A4q"/>
                                 </connections>
@@ -40,7 +42,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-Ja-RBq">
                                 <rect key="frame" x="99" y="665" width="217" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36470588240000001" green="0.76470588240000004" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.49411764705882355" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="次へ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -55,6 +57,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="目標設定" id="kjG-c7-h6q"/>
                     <connections>
+                        <outlet property="nextButton" destination="IFr-Ja-RBq" id="nh4-L6-4Wk"/>
                         <outlet property="stopSnackingButton" destination="g5P-8m-Ijw" id="Zil-1n-HbB"/>
                         <outlet property="targetTextField" destination="mY8-kY-D66" id="dbP-ec-uOo"/>
                         <segue destination="ARj-Xg-JcF" kind="show" identifier="count" id="wo5-GT-Sjv"/>
@@ -106,7 +109,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXL-uA-HoN">
                                 <rect key="frame" x="99" y="648" width="217" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.36470588240000001" green="0.76470588240000004" blue="0.87450980389999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="これで決定">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,6 +127,7 @@
                     <connections>
                         <outlet property="countPickerView" destination="OJs-O9-gTr" id="9JC-qb-9YZ"/>
                         <outlet property="countTextField" destination="zwc-PF-x0g" id="uiz-Kz-fzx"/>
+                        <outlet property="doneButton" destination="jXL-uA-HoN" id="xNA-MV-ecR"/>
                         <outlet property="receivedTargetTextLabel" destination="XPt-Mu-C8X" id="Mvq-Gq-h4C"/>
                     </connections>
                 </viewController>
@@ -148,13 +152,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-Xe-q8u">
                                 <rect key="frame" x="40" y="236" width="354" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MainViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ub7-Nu-6Nu">
-                                <rect key="frame" x="40" y="705" width="354" height="69"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>

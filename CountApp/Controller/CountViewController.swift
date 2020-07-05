@@ -14,6 +14,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var countTextField: UITextField!
     @IBOutlet weak var receivedTargetTextLabel: UILabel!
     
+    @IBOutlet weak var doneButton: UIButton!
     
     
     var targetStirng = String()
@@ -31,6 +32,8 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         receivedTargetTextLabel.text = targetStirng
         
         countTextField.text = dataList[0]
+        
+        doneButton.layer.cornerRadius = 5.0
 
         // Do any additional setup after loading the view.
     }

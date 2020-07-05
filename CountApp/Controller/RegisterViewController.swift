@@ -13,7 +13,10 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var targetTextField: UITextField!
     @IBOutlet weak var stopSnackingButton: UIButton!
     
-    var rgba = UIColor(red: 93/255.0, green: 195/255.0, blue: 223/255.0, alpha: 1.0)
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
+    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,10 @@ class RegisterViewController: UIViewController {
         stopSnackingButton.layer.borderColor = rgba.cgColor
         //外枠の太さ
         stopSnackingButton.layer.borderWidth = 2.0
-        //角丸
+        //テンプレ挿入ボタン角丸
         stopSnackingButton.layer.cornerRadius = 5.0
+        //次へボタン角丸
+        nextButton.layer.cornerRadius = 5.0
 
     }
     
