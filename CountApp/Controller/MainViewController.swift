@@ -13,6 +13,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var targetTextLabel: UILabel!
     @IBOutlet weak var countTextLabel: UILabel!
     
+    @IBOutlet weak var resetButton: UIButton!
+    @IBOutlet weak var countTapButton: UIButton!
+    
     /* --  カウント表示用のテキストラベル  -- */
     @IBOutlet weak var progress: UILabel!
     @IBOutlet weak var slash: UILabel!
@@ -33,25 +36,37 @@ class MainViewController: UIViewController {
         setValue.text = UserDefaults.standard.string(forKey: "count")
         progress.text = UserDefaults.standard.string(forKey: "j")
         
+        //カラー定数宣言
+        let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+        let buttonRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+        
+        //背景色設定
+        self.view.backgroundColor = backGroundColor
+        
+        //リセットボタンの見た目
+        resetButton.layer.borderColor = buttonRGBA.cgColor
+        resetButton.layer.borderWidth = 1
+        resetButton.layer.backgroundColor = .none
+        resetButton.layer.cornerRadius = 5.0
+        
+        /*-- カウントボタンの見た目 --*/
+        let circleSize:CGFloat = view.bounds.width / 2
+        countTapButton.layer.backgroundColor = .none
+        //カウント円と同じ大きさ
+        countTapButton.frame = CGRect(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
+        countTapButton.layer.cornerRadius = circleSize / 2
+        
+        //円を描画
         circle()
         countCircle()
-//        print(j)
-        
+
         // progressラベルがnilのときは"0"を表示させる
         if progress.text == nil {
             progress.text = "0"
         }
         
-//        print(UserDefaults.standard.integer(forKey: "j"))
-//        print(progress.text as Any)
-        
-//        progress.text = UserDefaults.standard.string(forKey: "j")
         j = UserDefaults.standard.integer(forKey: "j")
-        print("----------viewdidload------------")
-        print(UserDefaults.standard.integer(forKey: "j"))
-        print(j)
- 
-        
+
     }
     
     /* -- 画面遷移操作用※あとで消すやつ -- */
@@ -66,13 +81,21 @@ class MainViewController: UIViewController {
         progress.text = String(j)
         UserDefaults.standard.set(j, forKey: "j")
         countCircle()
-        //countCircle()の計算用変数iを保存しておく
+    }
+    
+    
+    @IBAction func resetAction(_ sender: Any) {
+        
+        
+        
+        j = 0
+        progress.text = String(j)
+        circle()
     }
     
     //円を描画
     func circle() {
-        //背景色設定
-        self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+
         //初期化
         let shapeLayer = CAShapeLayer.init();
         //円の大きさ

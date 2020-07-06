@@ -30,7 +30,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         print(UserDefaults.standard.object(forKey: "count") as Any)
         
         //目標が入っていない時は目標設定画面から表示させる
-        if UserDefaults.standard.object(forKey: "target") == nil {
+        if UserDefaults.standard.object(forKey: "target") == nil || UserDefaults.standard.object(forKey: "count") == nil {
             changeRootView()
         }
 
