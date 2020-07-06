@@ -17,6 +17,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
     var penetrateRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 0.3)
+    var backgroundRGBA = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
     
     /*-- viewDidLoad --*/
     override func viewDidLoad() {
@@ -25,8 +26,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         targetTextField.delegate = self
         
         //背景色設定
-        self.view.backgroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
-
+        self.view.backgroundColor = backgroundRGBA
+        
+        /*-- ボタンデザイン --*/
         //外枠の色
         stopSnackingButton.layer.borderColor = rgba.cgColor
         //外枠の太さ
@@ -37,6 +39,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         nextButton.layer.cornerRadius = 5.0
         //テキストフィールドに文字が入るまでは透過(ボタン無効化の見た目)させておく
         nextButton.layer.backgroundColor = penetrateRGBA.cgColor
+        //ボタンのテキストカラー
         nextButton.setTitleColor(.white, for: .normal)
         //次へボタンを無効化
         nextButton.isEnabled = false

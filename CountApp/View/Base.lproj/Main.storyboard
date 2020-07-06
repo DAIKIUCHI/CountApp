@@ -106,14 +106,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXL-uA-HoN">
                                 <rect key="frame" x="99" y="648" width="217" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
-                                <state key="normal" title="これで決定">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <state key="normal" title="これで決定"/>
                                 <connections>
                                     <action selector="targetDecisionAction:" destination="ARj-Xg-JcF" eventType="touchUpInside" id="1tt-4w-bMz"/>
-                                    <segue destination="btH-Xs-CI7" kind="presentation" modalPresentationStyle="fullScreen" id="DAt-89-nrG"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -126,6 +122,7 @@
                         <outlet property="countTextField" destination="zwc-PF-x0g" id="uiz-Kz-fzx"/>
                         <outlet property="doneButton" destination="jXL-uA-HoN" id="xNA-MV-ecR"/>
                         <outlet property="receivedTargetTextLabel" destination="XPt-Mu-C8X" id="Mvq-Gq-h4C"/>
+                        <segue destination="btH-Xs-CI7" kind="presentation" identifier="done" modalPresentationStyle="fullScreen" id="9hA-zV-WdS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DId-qX-Sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
