@@ -48,6 +48,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     /*-- 間食制限テンプレ挿入ボタン --*/
     @IBAction func stopSnackingAction(_ sender: Any) {
         targetTextField.text = "間食を制限する"
+        //次へボタンを有効化
+        nextButton.isEnabled = true
+        nextButton.backgroundColor = rgba
     }
     
     
@@ -89,7 +92,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     //リターンキーを押されたら呼ばれる
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        print("textFieldShouldReturn")
         //キーボード閉じる
         targetTextField.resignFirstResponder()
         return true
