@@ -150,13 +150,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="count" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mhl-Xe-q8u">
-                                <rect key="frame" x="75" y="184" width="265" height="69"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoG-Lc-j5u">
                                 <rect key="frame" x="164" y="432" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -199,9 +192,8 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-W3-87N">
-                                <rect key="frame" x="103" y="341" width="209" height="222"/>
+                                <rect key="frame" x="103" y="372" width="209" height="150"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.92549639939999995" green="0.92547899479999995" blue="0.9254907966" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <connections>
                                     <action selector="countTapAction:" destination="jlo-sG-aCu" eventType="touchUpInside" id="tW5-vu-Ikt"/>
@@ -215,7 +207,6 @@
                     <navigationItem key="navigationItem" title="進捗" id="ATC-KW-aCP"/>
                     <connections>
                         <outlet property="countTapButton" destination="CSp-W3-87N" id="3lA-MY-svi"/>
-                        <outlet property="countTextLabel" destination="Mhl-Xe-q8u" id="5Pd-1g-Uwr"/>
                         <outlet property="progress" destination="YoG-Lc-j5u" id="bD5-gK-W8g"/>
                         <outlet property="resetButton" destination="dfL-7e-usL" id="xdt-aH-UjZ"/>
                         <outlet property="setValue" destination="5B0-lE-mhW" id="aPR-yT-lIn"/>

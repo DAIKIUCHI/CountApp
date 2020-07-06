@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var targetTextLabel: UILabel!
-    @IBOutlet weak var countTextLabel: UILabel!
     
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var countTapButton: UIButton!
@@ -29,6 +28,7 @@ class MainViewController: UIViewController {
     //進捗カウントのインクリメント用
     var j = Int()
     
+    /*--  viewDidLoad --*/
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
         countTapButton.frame = CGRect(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
         countTapButton.layer.cornerRadius = circleSize / 2
         
-        //円を描画
+        // 円を描画
         circle()
         countCircle()
 
@@ -73,9 +73,8 @@ class MainViewController: UIViewController {
     func save() {
         UserDefaults.standard.set("保存", forKey: "saveContent")
     }
-    /* -- ------------------------ -- */
 
-    //カウントボタンの処理
+    /*-- カウントボタンの処理 --*/
     @IBAction func countTapAction(_ sender: Any) {
         j += 1
         progress.text = String(j)
@@ -83,19 +82,17 @@ class MainViewController: UIViewController {
         countCircle()
     }
     
-    
+    /*-- 回数リセットボタンの処理 --*/
     @IBAction func resetAction(_ sender: Any) {
-        
-        
-        
         j = 0
         progress.text = String(j)
         circle()
+        //アプリ内データの更新
+        UserDefaults.standard.set(j, forKey: "j")
     }
     
-    //円を描画
+    /*-- 円を描画 --*/
     func circle() {
-
         //初期化
         let shapeLayer = CAShapeLayer.init();
         //円の大きさ
@@ -126,7 +123,7 @@ class MainViewController: UIViewController {
         textAddsubView()
     }
     
-    //カウント回数を表す円
+    /*-- カウント回数を表す円 --*/
     func countCircle() {
         //初期化
         let shapeLayer = CAShapeLayer.init();
