@@ -12,6 +12,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var targetTextField: UITextField!
     @IBOutlet weak var stopSnackingButton: UIButton!
+    @IBOutlet weak var moneyLimit: UIButton!
+    
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -35,6 +37,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         stopSnackingButton.layer.borderWidth = 2.0
         //テンプレ挿入ボタン角丸
         stopSnackingButton.layer.cornerRadius = 5.0
+        
+        moneyLimit.layer.borderColor = rgba.cgColor
+        //外枠の太さ
+        moneyLimit.layer.borderWidth = 2.0
+        //テンプレ挿入ボタン角丸
+        moneyLimit.layer.cornerRadius = 5.0
+        
+        
         //次へボタン角丸
         nextButton.layer.cornerRadius = 5.0
         //テキストフィールドに文字が入るまでは透過(ボタン無効化の見た目)させておく
@@ -57,13 +67,21 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    //CountViewControllerへ画面遷移
+    @IBAction func moneyLimitAction(_ sender: Any) {
+        targetTextField.text = "使えるお金を制限する"
+        //次へボタンを有効化
+        nextButton.isEnabled = true
+        nextButton.backgroundColor = rgba
+        
+    }
+    
+    
+    /*-- CountViewControllerへ画面遷移 --*/
     @IBAction func nextAction(_ sender: Any) {
-//            nextButton.isEnabled = true
             performSegue(withIdentifier: "count", sender: nil)
     }
     
-    //値を渡す
+    /*-- 値をCountView Controllerへ渡す --*/
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "count" {
             let countVC: CountViewController = segue.destination as! CountViewController
@@ -71,9 +89,8 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //キーボード閉じた後に呼ばれる
+    /*-- キーボード閉じた後に呼ばれる --*/
     func textFieldDidEndEditing(_ textField: UITextField) {
-//        print(targetTextField.text as Any)
         switch targetTextField.text {
         case nil:
             nextButton.isEnabled = false
@@ -87,33 +104,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    //textfild編集中に呼び出される
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool
-//
-//        return true
-//    }
-    
-    //リターンキーを押されたら呼ばれる
+    /*-- リターンキーを押されたら呼ばれる --*/
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //キーボード閉じる
         targetTextField.resignFirstResponder()
         return true
     }
-    
-//    // Segue 準備
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//
-//       if (segue.identifier == "count") {
-//            let countVC: CountViewController = segue.destination as! CountViewController
-//
-//            //UIImage型の画像を入れる
-//            subVC.passImage = saveImage
-//
-//
-//        }
-//    }
-
-    
+      
     
     /*
     // MARK: - Navigation

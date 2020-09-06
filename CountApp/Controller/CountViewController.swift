@@ -18,7 +18,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var alertController: UIAlertController!
     
     var targetStirng = String()
-    let dataList = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"]
+    let dataList = ["回", "個", "円", "kcal"]
     var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
     var penetrateRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 0.3)
     var backgroundRGBA = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
@@ -38,7 +38,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         //目標画面から目標(targetString)をもってきて代入
         receivedTargetTextLabel.text = targetStirng
         //pickerで選択された数字を代入
-        countTextField.text = dataList[0]
+//        countTextField.text = dataList[0]
     
         /*-- ボタンデザイン --*/
         //角丸

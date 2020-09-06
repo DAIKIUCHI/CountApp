@@ -11,7 +11,6 @@ import UIKit
 class MainViewController: UIViewController {
     
     @IBOutlet weak var targetTextLabel: UILabel!
-    
     @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var countTapButton: UIButton!
     
@@ -19,6 +18,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var progress: UILabel!
     @IBOutlet weak var slash: UILabel!
     @IBOutlet weak var setValue: UILabel!
+    @IBOutlet weak var tap: UILabel!
     
     //countCircle()のインクリメント用
     var i:Double = 1.0
@@ -96,7 +96,7 @@ class MainViewController: UIViewController {
         //初期化
         let shapeLayer = CAShapeLayer.init();
         //円の大きさ
-        let circleSize:CGFloat = view.bounds.width / 2
+        let circleSize:CGFloat = view.bounds.width / 1.5
         /* --- xの位置 -> (ビューの幅 -  円の大きさ) / 2 = 円の左端の位置（画面の中央に描画できる）--- */
         let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
 //        print(self.view.bounds.height)
@@ -128,7 +128,7 @@ class MainViewController: UIViewController {
         //初期化
         let shapeLayer = CAShapeLayer.init();
         //円の大きさ
-        let circleSize:CGFloat = view.bounds.width / 2
+        let circleSize:CGFloat = view.bounds.width / 1.5
         /* --- xの位置 -> (ビューの幅 -  円の大きさ) / 2 = 円の左端の位置（画面の中央に描画できる）--- */
         let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
         shapeLayer.frame = shapeFrame
@@ -176,6 +176,7 @@ class MainViewController: UIViewController {
         self.view.addSubview(progress)
         self.view.addSubview(slash)
         self.view.addSubview(setValue)
+        self.view.addSubview(tap)
     }
     
     
