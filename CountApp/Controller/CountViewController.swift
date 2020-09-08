@@ -15,6 +15,8 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var receivedTargetTextLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
+    var unit:String = ""
+    
     var alertController: UIAlertController!
     
     var targetStirng = String()
@@ -55,7 +57,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         /*-- アラート表示設定 --*/
         let alertController:UIAlertController =
-                    UIAlertController(title:"\(receivedTargetTextLabel.text!)\n\(countTextField.text!)回まで！",
+            UIAlertController(title:"\(receivedTargetTextLabel.text!)\n\(countTextField.text!)\(unit)まで！",
                               message: nil,
                               preferredStyle: .alert)
 
@@ -107,12 +109,15 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         return dataList[row]
     }
-     
+    
+    
     // UIPickerViewのRowが選択された時の挙動
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
-        countTextField.text = dataList[row]
+//        countTextField.text = dataList[row]
+        
+        unit = dataList[row]
         doneButton.backgroundColor = rgba
         doneButton.isEnabled = true
     }
