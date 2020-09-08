@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var progress: UILabel!
     @IBOutlet weak var slash: UILabel!
     @IBOutlet weak var setValue: UILabel!
+    @IBOutlet weak var unitLabel: UILabel!
     @IBOutlet weak var tap: UILabel!
     
     //countCircle()のインクリメント用
@@ -34,6 +35,7 @@ class MainViewController: UIViewController {
         
         targetTextLabel.text = (UserDefaults.standard.object(forKey: "target") as! String)
         setValue.text = UserDefaults.standard.string(forKey: "count")
+        unitLabel.text = UserDefaults.standard.string(forKey: "unit")
         progress.text = UserDefaults.standard.string(forKey: "j")
         
         //カラー定数宣言
@@ -177,6 +179,7 @@ class MainViewController: UIViewController {
         self.view.addSubview(slash)
         self.view.addSubview(setValue)
         self.view.addSubview(tap)
+        self.view.addSubview(unitLabel)
     }
     
     

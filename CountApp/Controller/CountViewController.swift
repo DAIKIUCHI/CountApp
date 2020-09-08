@@ -70,6 +70,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                             //アプリ内にデータ保存
                             UserDefaults.standard.set(self.receivedTargetTextLabel.text, forKey: "target")
                             UserDefaults.standard.set(self.countTextField.text, forKey: "count")
+                            UserDefaults.standard.set(self.unit, forKey: "unit")
                             //画面遷移
                             self.performSegue(withIdentifier: "done", sender: nil)
                 })
