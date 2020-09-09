@@ -84,6 +84,29 @@ class MainViewController: UIViewController {
         countCircle()
     }
     
+    @IBAction func count10Button(_ sender: Any) {
+        j += 10
+        progress.text = String(j)
+        UserDefaults.standard.set(j, forKey: "j")
+        countCircle()
+    }
+    
+    @IBAction func count100Button(_ sender: Any) {
+        j += 100
+        progress.text = String(j)
+        UserDefaults.standard.set(j, forKey: "j")
+        countCircle()
+    }
+    
+    @IBAction func count1000Button(_ sender: Any) {
+        j += 1000
+        progress.text = String(j)
+        UserDefaults.standard.set(j, forKey: "j")
+        countCircle()
+    }
+    
+    
+    
     /*-- 回数リセットボタンの処理 --*/
     @IBAction func resetAction(_ sender: Any) {
         j = 0
