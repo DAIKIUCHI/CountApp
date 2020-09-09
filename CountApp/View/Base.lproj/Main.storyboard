@@ -164,28 +164,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoG-Lc-j5u">
-                                <rect key="frame" x="148" y="433" width="49" height="31"/>
+                                <rect key="frame" x="99" y="358" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZ3-Id-3X9">
-                                <rect key="frame" x="199" y="436" width="22" height="25"/>
+                                <rect key="frame" x="196" y="361" width="22" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5B0-lE-mhW">
-                                <rect key="frame" x="220" y="434" width="55" height="31"/>
+                                <rect key="frame" x="226" y="359" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="タップ！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQW-d0-TVC">
-                                <rect key="frame" x="169" y="478" width="82" height="24"/>
+                                <rect key="frame" x="166" y="436" width="82" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -211,23 +211,15 @@
                                     <action selector="resetAction:" destination="jlo-sG-aCu" eventType="touchUpInside" id="a0L-Wn-h1z"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-W3-87N">
-                                <rect key="frame" x="103" y="374" width="209" height="150"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <connections>
-                                    <action selector="countTapAction:" destination="jlo-sG-aCu" eventType="touchUpInside" id="tW5-vu-Ikt"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Oy-h1-wEz">
-                                <rect key="frame" x="270" y="439" width="42" height="21"/>
+                                <rect key="frame" x="314" y="363" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lul-FA-wS3">
-                                <rect key="frame" x="174" y="620" width="72" height="30"/>
+                                <rect key="frame" x="160" y="620" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+100"/>
                                 <connections>
@@ -235,7 +227,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9h-tk-YE4">
-                                <rect key="frame" x="62" y="620" width="30" height="30"/>
+                                <rect key="frame" x="20" y="620" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+10"/>
                                 <connections>
@@ -243,11 +235,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YED-hx-qbh">
-                                <rect key="frame" x="324" y="620" width="44" height="30"/>
+                                <rect key="frame" x="303" y="620" width="100" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="+1000"/>
                                 <connections>
                                     <action selector="count1000Button:" destination="jlo-sG-aCu" eventType="touchUpInside" id="qco-t3-KhU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSp-W3-87N">
+                                <rect key="frame" x="45" y="261" width="331" height="257"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <connections>
+                                    <action selector="countTapAction:" destination="jlo-sG-aCu" eventType="touchUpInside" id="tW5-vu-Ikt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -257,6 +257,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="4JM-7x-26H"/>
                     <navigationItem key="navigationItem" title="進捗" id="ATC-KW-aCP"/>
                     <connections>
+                        <outlet property="count1000plus" destination="YED-hx-qbh" id="oHd-Z8-esf"/>
+                        <outlet property="count100plus" destination="Lul-FA-wS3" id="Yhj-ch-AMg"/>
+                        <outlet property="count10plus" destination="m9h-tk-YE4" id="VpQ-L3-oWP"/>
                         <outlet property="countTapButton" destination="CSp-W3-87N" id="3lA-MY-svi"/>
                         <outlet property="progress" destination="YoG-Lc-j5u" id="bD5-gK-W8g"/>
                         <outlet property="resetButton" destination="dfL-7e-usL" id="xdt-aH-UjZ"/>

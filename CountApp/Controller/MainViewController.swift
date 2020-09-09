@@ -21,6 +21,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var unitLabel: UILabel!
     @IBOutlet weak var tap: UILabel!
     
+    @IBOutlet weak var count10plus: UIButton!
+    @IBOutlet weak var count100plus: UIButton!
+    @IBOutlet weak var count1000plus: UIButton!
+    
     //countCircle()のインクリメント用
     var i:Double = 1.0
     //円の終わりの位置指定のための計算用変数
@@ -28,6 +32,8 @@ class MainViewController: UIViewController {
     
     //進捗カウントのインクリメント用
     var j = Int()
+    
+    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
     
     /*--  viewDidLoad --*/
     override func viewDidLoad() {
@@ -50,6 +56,28 @@ class MainViewController: UIViewController {
         resetButton.layer.borderWidth = 1
         resetButton.layer.backgroundColor = .none
         resetButton.layer.cornerRadius = 5.0
+        
+        /*-- +10 +100 +1000 ボタンデザイン --*/
+        //外枠の色
+        count10plus.layer.borderColor = rgba.cgColor
+        //外枠の太さ
+        count10plus.layer.borderWidth = 2.0
+        //テンプレ挿入ボタン角丸
+        count10plus.layer.cornerRadius = 5.0
+        
+        //外枠の色
+        count100plus.layer.borderColor = rgba.cgColor
+        //外枠の太さ
+        count100plus.layer.borderWidth = 2.0
+        //テンプレ挿入ボタン角丸
+        count100plus.layer.cornerRadius = 5.0
+        
+        //外枠の色
+        count1000plus.layer.borderColor = rgba.cgColor
+        //外枠の太さ
+        count1000plus.layer.borderWidth = 2.0
+        //テンプレ挿入ボタン角丸
+        count1000plus.layer.cornerRadius = 5.0
         
         /*-- カウントボタンの見た目 --*/
         let circleSize:CGFloat = view.bounds.width / 2
@@ -123,7 +151,7 @@ class MainViewController: UIViewController {
         //円の大きさ
         let circleSize:CGFloat = view.bounds.width / 1.5
         /* --- xの位置 -> (ビューの幅 -  円の大きさ) / 2 = 円の左端の位置（画面の中央に描画できる）--- */
-        let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
+        let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 3, width: circleSize, height: circleSize)
 //        print(self.view.bounds.height)
 //        print((self.view.bounds.height - circleSize) / 2)
         shapeLayer.frame = shapeFrame
