@@ -59,15 +59,7 @@ class MainViewController: UIViewController {
         resetButton.layer.backgroundColor = .none
         resetButton.layer.cornerRadius = 5.0
         
-
-        
-        /*-- カウントボタンの見た目 --*/
-//        let circleSize:CGFloat = view.bounds.width / 3
-//        countTapButton.layer.backgroundColor = .none
-//        //カウント円と同じ大きさ
-//        countTapButton.frame = CGRect(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 2, width: circleSize, height: circleSize)
-//        countTapButton.layer.cornerRadius = circleSize / 2
-        
+        // ボタンやラベルのレイアウト
         labelDecoration()
         
         // 円を描画
@@ -87,14 +79,6 @@ class MainViewController: UIViewController {
     func save() {
         UserDefaults.standard.set("保存", forKey: "saveContent")
     }
-
-    /*-- カウントボタンの処理 --*/
-//    @IBAction func countTapAction(_ sender: Any) {
-//        j += 1
-//        progress.text = String(j)
-//        UserDefaults.standard.set(j, forKey: "j")
-//        countCircle()
-//    }
     
     
     @IBAction func count1Button(_ sender: Any) {
@@ -125,8 +109,6 @@ class MainViewController: UIViewController {
         countCircle()
     }
     
-    
-    
     /*-- 回数リセットボタンの処理 --*/
     @IBAction func resetAction(_ sender: Any) {
         j = 0
@@ -136,15 +118,16 @@ class MainViewController: UIViewController {
         UserDefaults.standard.set(j, forKey: "j")
     }
     
+    // ボタンやラベルのデザインをまとめている
     func labelDecoration() {
         
-        targetTextLabel.center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 6)
         slash.center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 2.6)
         progress.center = CGPoint(x: view.frame.size.width / 2.4, y: view.frame.size.height / 2.6)
         setValue.center = CGPoint(x: view.frame.size.width / 1.7, y: view.frame.size.height / 2.6)
         unitLabel.center = CGPoint(x: view.frame.size.width / 1.4, y: view.frame.size.height / 2.6)
         
-        resetButton.center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 1.2)
+        /*-- 目標のラベル デザイン --*/
+        targetTextLabel.frame = CGRect(x: view.frame.size.width / 10, y: view.frame.size.height / 8, width: view.frame.size.width / 1.25, height: view.frame.size.height / 13)
         
         /*-- +1 ボタンデザイン --*/
         //外枠の色
@@ -154,8 +137,7 @@ class MainViewController: UIViewController {
         //テンプレ挿入ボタン角丸
         count1plus.layer.cornerRadius = 5.0
         //枠のサイズ
-        count1plus.frame.size = CGSize(width: 330, height: 45)
-        count1plus.center = CGPoint(x: view.frame.size.width / 2, y: view.frame.size.height / 1.6)
+        count1plus.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.63, width: view.frame.size.width / 1.53846154, height: view.frame.size.height / 17)
         
         /*-- +10 ボタンデザイン --*/
         //外枠の色
@@ -165,7 +147,7 @@ class MainViewController: UIViewController {
         //テンプレ挿入ボタン角丸
         count10plus.layer.cornerRadius = 5.0
         //枠のサイズ
-        count10plus.frame = CGRect(x: view.frame.size.width / 10, y: view.frame.size.height / 1.5, width: 100, height: 45)
+        count10plus.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.44, width: view.frame.size.width / 5, height: view.frame.size.height / 17)
         
         /*-- +100 ボタンデザイン --*/
         //外枠の色
@@ -175,7 +157,7 @@ class MainViewController: UIViewController {
         //テンプレ挿入ボタン角丸
         count100plus.layer.cornerRadius = 5.0
         //枠のサイズ
-        count100plus.frame = CGRect(x: view.frame.size.width / 2.65, y: view.frame.size.height / 1.5, width: 100, height: 45)
+        count100plus.frame = CGRect(x: view.frame.size.width / 2.5, y: view.frame.size.height / 1.44, width: view.frame.size.width / 5, height: view.frame.size.height / 17)
         
         
         /*-- +1000 ボタンデザイン --*/
@@ -186,7 +168,10 @@ class MainViewController: UIViewController {
         //テンプレ挿入ボタン角丸
         count1000plus.layer.cornerRadius = 5.0
         //枠のサイズ
-        count1000plus.frame = CGRect(x: view.frame.size.width / 1.52, y: view.frame.size.height / 1.5, width: 100, height: 45)
+        count1000plus.frame = CGRect(x: view.frame.size.width / 1.6, y: view.frame.size.height / 1.44, width: view.frame.size.width / 5, height: view.frame.size.height / 17)
+        
+        /*-- リセット ボタンデザイン --*/
+        resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 1.53846154, height: view.frame.size.height / 17)
         
     }
     
@@ -195,7 +180,7 @@ class MainViewController: UIViewController {
         //初期化
         let shapeLayer = CAShapeLayer.init();
         //円の大きさ
-        let circleSize:CGFloat = view.bounds.width / 1.5
+        let circleSize:CGFloat = view.bounds.width / 1.7
         /* --- xの位置 -> (ビューの幅 -  円の大きさ) / 2 = 円の左端の位置（画面の中央に描画できる）--- */
         let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 3, width: circleSize, height: circleSize)
         shapeLayer.frame = shapeFrame
@@ -225,7 +210,7 @@ class MainViewController: UIViewController {
         //初期化
         let shapeLayer = CAShapeLayer.init();
         //円の大きさ
-        let circleSize:CGFloat = view.bounds.width / 1.5
+        let circleSize:CGFloat = view.bounds.width / 1.7
         /* --- xの位置 -> (ビューの幅 -  円の大きさ) / 2 = 円の左端の位置（画面の中央に描画できる）--- */
         let shapeFrame = CGRect.init(x: (self.view.bounds.width - circleSize) / 2, y: (self.view.bounds.height - circleSize) / 3, width: circleSize, height: circleSize)
         shapeLayer.frame = shapeFrame
