@@ -54,11 +54,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-dj-j3s">
+                                <rect key="frame" x="62" y="407.5" width="290" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="摂取カロリーを制限する">
+                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="calorieRestrictionAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="bd9-wG-Uh3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="bottom" secondItem="IFr-Ja-RBq" secondAttribute="bottom" constant="70" id="1eX-sL-wJh"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="mY8-kY-D66" secondAttribute="trailing" constant="62" id="5DT-Np-jZv"/>
+                            <constraint firstItem="X0q-dj-j3s" firstAttribute="top" secondItem="1Xg-EN-Kr8" secondAttribute="bottom" constant="15" id="EoG-Cr-VTC"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="IFr-Ja-RBq" secondAttribute="trailing" constant="100" id="G0K-ZC-yYa"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="g5P-8m-Ijw" secondAttribute="trailing" constant="62" id="Ixt-Pe-n8l"/>
                             <constraint firstItem="mY8-kY-D66" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="JUw-F8-IFy"/>
@@ -66,6 +77,8 @@
                             <constraint firstItem="g5P-8m-Ijw" firstAttribute="top" secondItem="mY8-kY-D66" secondAttribute="bottom" constant="30" id="QVH-7T-qVC"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="1Xg-EN-Kr8" secondAttribute="trailing" constant="62" id="Sdu-YK-GzK"/>
                             <constraint firstItem="oYB-WW-KPY" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="60" id="hfZ-Do-7bJ"/>
+                            <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="X0q-dj-j3s" secondAttribute="trailing" constant="62" id="ib0-Pg-e3e"/>
+                            <constraint firstItem="X0q-dj-j3s" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="k1S-5f-P3r"/>
                             <constraint firstItem="1Xg-EN-Kr8" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="rKq-Ck-I5u"/>
                             <constraint firstItem="mY8-kY-D66" firstAttribute="top" secondItem="oYB-WW-KPY" secondAttribute="bottom" constant="40" id="ryX-Ox-glA"/>
                             <constraint firstItem="1Xg-EN-Kr8" firstAttribute="top" secondItem="g5P-8m-Ijw" secondAttribute="bottom" constant="15" id="spX-FV-L6Z"/>
@@ -77,6 +90,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="目標設定" id="kjG-c7-h6q"/>
                     <connections>
+                        <outlet property="calorieRestrictionButton" destination="X0q-dj-j3s" id="AKd-Nd-Ppz"/>
                         <outlet property="moneyLimit" destination="1Xg-EN-Kr8" id="odg-ou-wGH"/>
                         <outlet property="nextButton" destination="IFr-Ja-RBq" id="nh4-L6-4Wk"/>
                         <outlet property="stopSnackingButton" destination="g5P-8m-Ijw" id="Zil-1n-HbB"/>
@@ -86,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AH1-s1-4GJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1586" y="-305"/>
+            <point key="canvasLocation" x="1585.5072463768117" y="-305.35714285714283"/>
         </scene>
         <!--Count View Controller-->
         <scene sceneID="K5U-hG-o2n">
@@ -134,7 +148,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJs-O9-gTr">
-                                <rect key="frame" x="0.0" y="376" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="375.5" width="414" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

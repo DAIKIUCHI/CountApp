@@ -13,7 +13,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var targetTextField: UITextField!
     @IBOutlet weak var stopSnackingButton: UIButton!
     @IBOutlet weak var moneyLimit: UIButton!
-    
+    @IBOutlet weak var calorieRestrictionButton: UIButton!
     
     @IBOutlet weak var nextButton: UIButton!
     
@@ -37,12 +37,18 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         stopSnackingButton.layer.borderWidth = 2.0
         //テンプレ挿入ボタン角丸
         stopSnackingButton.layer.cornerRadius = 5.0
-        
+        //外枠の色
         moneyLimit.layer.borderColor = rgba.cgColor
         //外枠の太さ
         moneyLimit.layer.borderWidth = 2.0
         //テンプレ挿入ボタン角丸
         moneyLimit.layer.cornerRadius = 5.0
+        //外枠の色
+        calorieRestrictionButton.layer.borderColor = rgba.cgColor
+        //外枠の太さ
+        calorieRestrictionButton.layer.borderWidth = 2.0
+        //テンプレ挿入ボタン角丸
+        calorieRestrictionButton.layer.cornerRadius = 5.0
         
         
         //次へボタン角丸
@@ -74,6 +80,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         nextButton.backgroundColor = rgba
         
     }
+    
+    @IBAction func calorieRestrictionAction(_ sender: Any) {
+        targetTextField.text = "摂取カロリーを制限する"
+        //次へボタンを有効化
+        nextButton.isEnabled = true
+        nextButton.backgroundColor = rgba
+    }
+    
     
     
     /*-- CountViewControllerへ画面遷移 --*/
