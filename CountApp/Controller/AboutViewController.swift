@@ -16,6 +16,16 @@ class AboutViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    
+    @IBAction func twitterLinkAction(_ sender: Any) {
+        let url = NSURL(string: "https://twitter.com/uchi_dev")
+        if UIApplication.shared.canOpenURL(url! as URL){
+            UIApplication.shared.open(url! as URL, options: [:], completionHandler: nil)
+        }
+
+        
+    }
+    
 
     /*
     // MARK: - Navigation
