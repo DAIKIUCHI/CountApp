@@ -16,6 +16,7 @@
 		3BAF9A5324AFFFE6008C048C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5224AFFFE6008C048C /* MainViewController.swift */; };
 		3BAF9A5824B02201008C048C /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5724B02201008C048C /* CountViewController.swift */; };
 		3BAF9A5A24B08FAA008C048C /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5924B08FAA008C048C /* DrawView.swift */; };
+		3BCB48FC250E1CB300ED27B7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		3BAF9A5224AFFFE6008C048C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3BAF9A5724B02201008C048C /* CountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
 		3BAF9A5924B08FAA008C048C /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				3BAF9A5924B08FAA008C048C /* DrawView.swift */,
 				3BAF9A5024AFFF0B008C048C /* RegisterViewController.swift */,
 				3BAF9A5724B02201008C048C /* CountViewController.swift */,
+				3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				3BAF9A4F24AF7F30008C048C /* AppDelegate.swift in Sources */,
 				3BAF9A3A24AF6C82008C048C /* SceneDelegate.swift in Sources */,
 				3BAF9A5A24B08FAA008C048C /* DrawView.swift in Sources */,
+				3BCB48FC250E1CB300ED27B7 /* AboutViewController.swift in Sources */,
 				3BAF9A5124AFFF0C008C048C /* RegisterViewController.swift in Sources */,
 				3BAF9A5324AFFFE6008C048C /* MainViewController.swift in Sources */,
 				3BAF9A5824B02201008C048C /* CountViewController.swift in Sources */,
