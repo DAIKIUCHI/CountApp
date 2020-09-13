@@ -20,16 +20,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5P-8m-Ijw">
-                                <rect key="frame" x="62" y="379.5" width="290" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="カロリーコントロールする">
-                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="stopSnackingAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="JcO-0V-A4q"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-Ja-RBq">
                                 <rect key="frame" x="100" y="742" width="214" height="50"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
@@ -55,9 +45,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-dj-j3s">
-                                <rect key="frame" x="62" y="481.5" width="290" height="36"/>
+                                <rect key="frame" x="62" y="379.5" width="290" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="間食していい回数を決める">
+                                <state key="normal" title="カロリーコントロールする">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -70,30 +60,40 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5P-8m-Ijw">
+                                <rect key="frame" x="62" y="481.5" width="290" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="間食していい回数を決める">
+                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopSnackingAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="JcO-0V-A4q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="bottom" secondItem="IFr-Ja-RBq" secondAttribute="bottom" constant="70" id="1eX-sL-wJh"/>
+                            <constraint firstItem="X0q-dj-j3s" firstAttribute="top" secondItem="Zd4-iQ-AGm" secondAttribute="bottom" constant="20" id="4fk-b7-uOc"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="mY8-kY-D66" secondAttribute="trailing" constant="62" id="5DT-Np-jZv"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="Zd4-iQ-AGm" secondAttribute="trailing" constant="20" id="5h0-Yh-nyI"/>
-                            <constraint firstItem="X0q-dj-j3s" firstAttribute="top" secondItem="1Xg-EN-Kr8" secondAttribute="bottom" constant="15" id="EoG-Cr-VTC"/>
+                            <constraint firstItem="1Xg-EN-Kr8" firstAttribute="top" secondItem="X0q-dj-j3s" secondAttribute="bottom" constant="15" id="ALs-Ph-VEj"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="IFr-Ja-RBq" secondAttribute="trailing" constant="100" id="G0K-ZC-yYa"/>
-                            <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="g5P-8m-Ijw" secondAttribute="trailing" constant="62" id="Ixt-Pe-n8l"/>
                             <constraint firstItem="mY8-kY-D66" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="JUw-F8-IFy"/>
+                            <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="X0q-dj-j3s" secondAttribute="trailing" constant="62" id="MEy-Ng-7S8"/>
                             <constraint firstItem="IFr-Ja-RBq" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="100" id="P8a-AA-Zzg"/>
                             <constraint firstItem="Zd4-iQ-AGm" firstAttribute="top" secondItem="mY8-kY-D66" secondAttribute="bottom" constant="60" id="QPb-pJ-MGA"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="1Xg-EN-Kr8" secondAttribute="trailing" constant="62" id="Sdu-YK-GzK"/>
                             <constraint firstItem="Zd4-iQ-AGm" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="20" id="TI9-cU-fdk"/>
                             <constraint firstItem="oYB-WW-KPY" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="60" id="hfZ-Do-7bJ"/>
-                            <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="X0q-dj-j3s" secondAttribute="trailing" constant="62" id="ib0-Pg-e3e"/>
-                            <constraint firstItem="X0q-dj-j3s" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="k1S-5f-P3r"/>
+                            <constraint firstItem="X0q-dj-j3s" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="lwO-Al-tUr"/>
                             <constraint firstItem="1Xg-EN-Kr8" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="rKq-Ck-I5u"/>
                             <constraint firstItem="mY8-kY-D66" firstAttribute="top" secondItem="oYB-WW-KPY" secondAttribute="bottom" constant="40" id="ryX-Ox-glA"/>
-                            <constraint firstItem="1Xg-EN-Kr8" firstAttribute="top" secondItem="g5P-8m-Ijw" secondAttribute="bottom" constant="15" id="spX-FV-L6Z"/>
+                            <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="g5P-8m-Ijw" secondAttribute="trailing" constant="62" id="ska-rz-9P7"/>
                             <constraint firstItem="oYB-WW-KPY" firstAttribute="top" secondItem="llv-Dj-Udk" secondAttribute="top" constant="80" id="usw-An-wnq"/>
-                            <constraint firstItem="g5P-8m-Ijw" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="vKY-za-c8j"/>
+                            <constraint firstItem="g5P-8m-Ijw" firstAttribute="top" secondItem="1Xg-EN-Kr8" secondAttribute="bottom" constant="15" id="v1L-q5-NVS"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="oYB-WW-KPY" secondAttribute="trailing" constant="60" id="wsT-k6-nt8"/>
-                            <constraint firstItem="g5P-8m-Ijw" firstAttribute="top" secondItem="Zd4-iQ-AGm" secondAttribute="bottom" constant="20" id="yaF-EM-Kte"/>
+                            <constraint firstItem="g5P-8m-Ijw" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="x12-Zc-1oK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="llv-Dj-Udk"/>
                     </view>

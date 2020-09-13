@@ -66,7 +66,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     /*-- 間食制限テンプレ挿入ボタン --*/
     @IBAction func stopSnackingAction(_ sender: Any) {
-        targetTextField.text = "間食を制限する"
+        targetTextField.text = "間食していい回数を決める"
         //次へボタンを有効化
         nextButton.isEnabled = true
         nextButton.backgroundColor = rgba
@@ -74,7 +74,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func moneyLimitAction(_ sender: Any) {
-        targetTextField.text = "使えるお金を制限する"
+        targetTextField.text = "使っていいお金を決める"
         //次へボタンを有効化
         nextButton.isEnabled = true
         nextButton.backgroundColor = rgba
@@ -82,7 +82,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calorieRestrictionAction(_ sender: Any) {
-        targetTextField.text = "摂取カロリーを制限する"
+        targetTextField.text = "カロリーコントロールする"
         //次へボタンを有効化
         nextButton.isEnabled = true
         nextButton.backgroundColor = rgba
