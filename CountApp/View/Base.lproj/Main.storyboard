@@ -15,15 +15,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="○○を我慢する" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-kY-D66">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex) カロリーコントロールする！！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-kY-D66">
                                 <rect key="frame" x="62" y="241.5" width="290" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5P-8m-Ijw">
-                                <rect key="frame" x="62" y="305.5" width="290" height="36"/>
+                                <rect key="frame" x="62" y="379.5" width="290" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="間食の回数を制限する">
+                                <state key="normal" title="カロリーコントロールする">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -39,43 +39,51 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xg-EN-Kr8">
-                                <rect key="frame" x="62" y="356.5" width="290" height="36"/>
+                                <rect key="frame" x="62" y="430.5" width="290" height="36"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
-                                <state key="normal" title="使えるお金を制限する">
+                                <state key="normal" title="使っていいお金を決める">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="moneyLimitAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="QXx-Tz-clu"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="目標どうする？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYB-WW-KPY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何をガマンする？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYB-WW-KPY">
                                 <rect key="frame" x="60" y="168" width="294" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-dj-j3s">
-                                <rect key="frame" x="62" y="407.5" width="290" height="36"/>
+                                <rect key="frame" x="62" y="481.5" width="290" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="摂取カロリーを制限する">
+                                <state key="normal" title="間食していい回数を決める">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="calorieRestrictionAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="bd9-wG-Uh3"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何をするか迷ったら・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd4-iQ-AGm">
+                                <rect key="frame" x="20" y="335.5" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="bottom" secondItem="IFr-Ja-RBq" secondAttribute="bottom" constant="70" id="1eX-sL-wJh"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="mY8-kY-D66" secondAttribute="trailing" constant="62" id="5DT-Np-jZv"/>
+                            <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="Zd4-iQ-AGm" secondAttribute="trailing" constant="20" id="5h0-Yh-nyI"/>
                             <constraint firstItem="X0q-dj-j3s" firstAttribute="top" secondItem="1Xg-EN-Kr8" secondAttribute="bottom" constant="15" id="EoG-Cr-VTC"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="IFr-Ja-RBq" secondAttribute="trailing" constant="100" id="G0K-ZC-yYa"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="g5P-8m-Ijw" secondAttribute="trailing" constant="62" id="Ixt-Pe-n8l"/>
                             <constraint firstItem="mY8-kY-D66" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="JUw-F8-IFy"/>
                             <constraint firstItem="IFr-Ja-RBq" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="100" id="P8a-AA-Zzg"/>
-                            <constraint firstItem="g5P-8m-Ijw" firstAttribute="top" secondItem="mY8-kY-D66" secondAttribute="bottom" constant="30" id="QVH-7T-qVC"/>
+                            <constraint firstItem="Zd4-iQ-AGm" firstAttribute="top" secondItem="mY8-kY-D66" secondAttribute="bottom" constant="60" id="QPb-pJ-MGA"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="1Xg-EN-Kr8" secondAttribute="trailing" constant="62" id="Sdu-YK-GzK"/>
+                            <constraint firstItem="Zd4-iQ-AGm" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="20" id="TI9-cU-fdk"/>
                             <constraint firstItem="oYB-WW-KPY" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="60" id="hfZ-Do-7bJ"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="X0q-dj-j3s" secondAttribute="trailing" constant="62" id="ib0-Pg-e3e"/>
                             <constraint firstItem="X0q-dj-j3s" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="k1S-5f-P3r"/>
@@ -85,6 +93,7 @@
                             <constraint firstItem="oYB-WW-KPY" firstAttribute="top" secondItem="llv-Dj-Udk" secondAttribute="top" constant="80" id="usw-An-wnq"/>
                             <constraint firstItem="g5P-8m-Ijw" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="vKY-za-c8j"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="oYB-WW-KPY" secondAttribute="trailing" constant="60" id="wsT-k6-nt8"/>
+                            <constraint firstItem="g5P-8m-Ijw" firstAttribute="top" secondItem="Zd4-iQ-AGm" secondAttribute="bottom" constant="20" id="yaF-EM-Kte"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="llv-Dj-Udk"/>
                     </view>
