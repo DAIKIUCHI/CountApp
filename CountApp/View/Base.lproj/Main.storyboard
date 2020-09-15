@@ -315,7 +315,38 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZr-gr-xoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442.0289855072465" y="422.54464285714283"/>
+            <point key="canvasLocation" x="3055" y="494"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="8pj-eJ-J0o">
+            <objects>
+                <viewController id="gmB-zF-GLh" customClass="DeleteViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hFC-yi-xCT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pvs-Eb-1nR">
+                                <rect key="frame" x="95" y="358" width="162" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="全データを削除する">
+                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteAction:" destination="gmB-zF-GLh" eventType="touchUpInside" id="ebb-ai-x7y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="RFK-X6-zCN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="yL3-Bu-gfs"/>
+                    <connections>
+                        <segue destination="q5L-2D-21R" kind="presentation" identifier="delete" modalPresentationStyle="fullScreen" id="Lfr-Jd-shX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4bJ-Ef-jAQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3772" y="981"/>
         </scene>
         <!--Item-->
         <scene sceneID="WcB-Dn-tYx">
@@ -339,7 +370,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「&quot;なにか&quot;の回数、数値を把握できるアプリ」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-ek-y01">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「&quot;なにか&quot;の回数、数値を記録できるアプリ」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-ek-y01">
                                 <rect key="frame" x="27" y="165" width="321" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -428,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xg-YI-NJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2344.8000000000002" y="1149.0147783251232"/>
+            <point key="canvasLocation" x="2647" y="1297"/>
         </scene>
         <!--Item-->
         <scene sceneID="JnU-WK-072">
@@ -454,6 +485,7 @@
             <objects>
                 <navigationController storyboardIdentifier="RegisterViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q5L-2D-21R" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="uMB-PI-DY1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VwY-lu-Vcc">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -480,7 +512,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="jlo-sG-aCu" kind="relationship" relationship="viewControllers" id="f1S-1j-vZp"/>
-                        <segue destination="Knu-f8-2CQ" kind="relationship" relationship="viewControllers" id="ykt-Oe-sWe"/>
+                        <segue destination="gmB-zF-GLh" kind="relationship" relationship="viewControllers" id="BnT-Qp-FNF"/>
+                        <segue destination="Knu-f8-2CQ" kind="relationship" relationship="viewControllers" id="cVy-zP-UqH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06S-Ba-OOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

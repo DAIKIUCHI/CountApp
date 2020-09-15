@@ -77,7 +77,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         // Cancel のaction
         let cancelAction:UIAlertAction =
-                    UIAlertAction(title: "やっぱ変える",
+                    UIAlertAction(title: "やっぱりやめとく",
                           style: .cancel,
                           handler:{
                             (action:UIAlertAction!) -> Void in
