@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btH-Xs-CI7">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,25 +12,25 @@
             <objects>
                 <viewController id="ViZ-in-oRA" customClass="RegisterViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N0l-uX-Q2j">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex) カロリーコントロールする！！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-kY-D66">
-                                <rect key="frame" x="62" y="241.5" width="290" height="34"/>
+                                <rect key="frame" x="62" y="234.66666666666666" width="251" height="33.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-Ja-RBq">
-                                <rect key="frame" x="100" y="742" width="214" height="50"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-Ja-RBq">
+                                <rect key="frame" x="100" y="599" width="175" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="次へ"/>
                                 <connections>
                                     <action selector="nextAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="AZ5-yx-CdL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Xg-EN-Kr8">
-                                <rect key="frame" x="62" y="430.5" width="290" height="36"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="20"/>
+                                <rect key="frame" x="62" y="418" width="251" height="33"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <state key="normal" title="使っていいお金を決める">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -39,14 +39,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何をガマンする？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYB-WW-KPY">
-                                <rect key="frame" x="60" y="168" width="294" height="33.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <rect key="frame" x="60" y="168" width="255" height="26.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X0q-dj-j3s">
-                                <rect key="frame" x="62" y="379.5" width="290" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="62" y="370" width="251" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="カロリーコントロールする">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -55,14 +55,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="何をするか迷ったら・・・" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zd4-iQ-AGm">
-                                <rect key="frame" x="20" y="335.5" width="374" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="20" y="328.66666666666669" width="335" height="21.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g5P-8m-Ijw">
-                                <rect key="frame" x="62" y="481.5" width="290" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="62" y="466" width="251" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="間食していい回数を決める">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -73,7 +73,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="llv-Dj-Udk" firstAttribute="bottom" secondItem="IFr-Ja-RBq" secondAttribute="bottom" constant="70" id="1eX-sL-wJh"/>
+                            <constraint firstItem="IFr-Ja-RBq" firstAttribute="top" secondItem="g5P-8m-Ijw" secondAttribute="bottom" constant="100" id="4OF-WD-pNY"/>
                             <constraint firstItem="X0q-dj-j3s" firstAttribute="top" secondItem="Zd4-iQ-AGm" secondAttribute="bottom" constant="20" id="4fk-b7-uOc"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="mY8-kY-D66" secondAttribute="trailing" constant="62" id="5DT-Np-jZv"/>
                             <constraint firstItem="llv-Dj-Udk" firstAttribute="trailing" secondItem="Zd4-iQ-AGm" secondAttribute="trailing" constant="20" id="5h0-Yh-nyI"/>
@@ -109,67 +109,67 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AH1-s1-4GJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1585.5072463768117" y="-305.35714285714283"/>
+            <point key="canvasLocation" x="1584.8" y="-305.39730134932535"/>
         </scene>
         <!--Count View Controller-->
         <scene sceneID="K5U-hG-o2n">
             <objects>
                 <viewController id="ARj-Xg-JcF" customClass="CountViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x8B-YZ-z9g">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1日いくつまで？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5BO-Hg-uF8">
-                                <rect key="frame" x="60" y="187" width="294" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="60" y="169.33333333333334" width="255" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zwc-PF-x0g">
-                                <rect key="frame" x="150" y="264" width="114" height="34"/>
+                                <rect key="frame" x="150" y="244" width="75" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数字を入力" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c22-Re-lca">
-                                <rect key="frame" x="100" y="233.5" width="214" height="20.5"/>
+                                <rect key="frame" x="100" y="213.33333333333334" width="175" height="20.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPt-Mu-C8X">
-                                <rect key="frame" x="60" y="128" width="294" height="29"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <rect key="frame" x="60" y="117.99999999999999" width="255" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXL-uA-HoN">
-                                <rect key="frame" x="90" y="722" width="234" height="50"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXL-uA-HoN">
+                                <rect key="frame" x="90" y="579" width="195" height="38"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
                                 <state key="normal" title="これで決定"/>
                                 <connections>
                                     <action selector="targetDecisionAction:" destination="ARj-Xg-JcF" eventType="touchUpInside" id="1tt-4w-bMz"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="単位は？" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npC-96-lOX">
-                                <rect key="frame" x="75" y="348" width="264" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="75" y="308" width="225" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJs-O9-gTr">
-                                <rect key="frame" x="0.0" y="375.5" width="414" height="216"/>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OJs-O9-gTr">
+                                <rect key="frame" x="0.0" y="313" width="375" height="182"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="npC-96-lOX" firstAttribute="leading" secondItem="7VQ-Ol-aM6" secondAttribute="leading" constant="75" id="0Hs-jP-xdX"/>
-                            <constraint firstItem="npC-96-lOX" firstAttribute="top" secondItem="zwc-PF-x0g" secondAttribute="bottom" constant="50" id="0Sc-CR-IVy"/>
+                            <constraint firstItem="npC-96-lOX" firstAttribute="top" secondItem="zwc-PF-x0g" secondAttribute="bottom" constant="30" id="0Sc-CR-IVy"/>
                             <constraint firstItem="c22-Re-lca" firstAttribute="leading" secondItem="7VQ-Ol-aM6" secondAttribute="leading" constant="100" id="5yN-Je-D1n"/>
                             <constraint firstItem="7VQ-Ol-aM6" firstAttribute="trailing" secondItem="npC-96-lOX" secondAttribute="trailing" constant="75" id="8Dl-Fg-dD8"/>
                             <constraint firstItem="7VQ-Ol-aM6" firstAttribute="trailing" secondItem="jXL-uA-HoN" secondAttribute="trailing" constant="90" id="8Kk-f2-yVD"/>
                             <constraint firstItem="OJs-O9-gTr" firstAttribute="top" secondItem="npC-96-lOX" secondAttribute="bottom" constant="1" id="B89-Cb-ZDi"/>
                             <constraint firstItem="7VQ-Ol-aM6" firstAttribute="trailing" secondItem="zwc-PF-x0g" secondAttribute="trailing" constant="150" id="CNx-VZ-Eq1"/>
-                            <constraint firstItem="XPt-Mu-C8X" firstAttribute="top" secondItem="7VQ-Ol-aM6" secondAttribute="top" constant="40" id="DRX-Yj-Gb6"/>
+                            <constraint firstItem="XPt-Mu-C8X" firstAttribute="top" secondItem="7VQ-Ol-aM6" secondAttribute="top" constant="30" id="DRX-Yj-Gb6"/>
                             <constraint firstItem="OJs-O9-gTr" firstAttribute="leading" secondItem="7VQ-Ol-aM6" secondAttribute="leading" id="EWq-dq-o2s"/>
                             <constraint firstItem="7VQ-Ol-aM6" firstAttribute="trailing" secondItem="5BO-Hg-uF8" secondAttribute="trailing" constant="60" id="Jvh-iP-bMp"/>
                             <constraint firstItem="XPt-Mu-C8X" firstAttribute="leading" secondItem="7VQ-Ol-aM6" secondAttribute="leading" constant="60" id="SHK-gZ-D5L"/>
@@ -178,9 +178,9 @@
                             <constraint firstItem="5BO-Hg-uF8" firstAttribute="leading" secondItem="7VQ-Ol-aM6" secondAttribute="leading" constant="60" id="fre-59-49l"/>
                             <constraint firstItem="c22-Re-lca" firstAttribute="top" secondItem="5BO-Hg-uF8" secondAttribute="bottom" constant="20" id="iAs-T9-w7f"/>
                             <constraint firstItem="7VQ-Ol-aM6" firstAttribute="trailing" secondItem="XPt-Mu-C8X" secondAttribute="trailing" constant="60" id="icy-dt-h8U"/>
+                            <constraint firstItem="jXL-uA-HoN" firstAttribute="top" secondItem="OJs-O9-gTr" secondAttribute="bottom" constant="30" id="nFX-74-lbg"/>
                             <constraint firstItem="7VQ-Ol-aM6" firstAttribute="trailing" secondItem="c22-Re-lca" secondAttribute="trailing" constant="100" id="q8w-mE-cE8"/>
-                            <constraint firstItem="5BO-Hg-uF8" firstAttribute="top" secondItem="XPt-Mu-C8X" secondAttribute="bottom" constant="30" id="rTq-YU-RZM"/>
-                            <constraint firstItem="7VQ-Ol-aM6" firstAttribute="bottom" secondItem="jXL-uA-HoN" secondAttribute="bottom" constant="90" id="z8X-LN-av9"/>
+                            <constraint firstItem="5BO-Hg-uF8" firstAttribute="top" secondItem="XPt-Mu-C8X" secondAttribute="bottom" constant="25" id="rTq-YU-RZM"/>
                             <constraint firstItem="zwc-PF-x0g" firstAttribute="top" secondItem="c22-Re-lca" secondAttribute="bottom" constant="10" id="z9G-te-mOZ"/>
                             <constraint firstItem="OJs-O9-gTr" firstAttribute="trailing" secondItem="7VQ-Ol-aM6" secondAttribute="trailing" id="zoc-Qi-RZE"/>
                         </constraints>
@@ -197,20 +197,20 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DId-qX-Sce" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2405.7971014492755" y="-305.35714285714283"/>
+            <point key="canvasLocation" x="2405.5999999999999" y="-305.39730134932535"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="bTT-Sy-fqD">
             <objects>
                 <viewController id="jlo-sG-aCu" userLabel="Main View Controller" customClass="MainViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Htr-eQ-xlq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="target" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0sl-S2-2Dr">
                                 <rect key="frame" x="0.0" y="118" width="414" height="79"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -322,41 +322,34 @@
             <objects>
                 <viewController id="Knu-f8-2CQ" customClass="AboutViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2P9-f0-CcU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="○○とは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-3F-bXW">
-                                <rect key="frame" x="34" y="108" width="91" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;ろぐろぐ&quot;とは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-3F-bXW">
+                                <rect key="frame" x="34" y="108" width="174" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="※使用上の注意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-xY-H0Y">
-                                <rect key="frame" x="38" y="319" width="170" height="50"/>
+                                <rect key="frame" x="38" y="304" width="170" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1日の摂取カロリーを管理できるアプリです。" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-ek-y01">
-                                <rect key="frame" x="38" y="156" width="347" height="42"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「&quot;なにか&quot;の回数、数値を把握できるアプリ」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-ek-y01">
+                                <rect key="frame" x="27" y="165" width="321" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「このシンプルさが逆にいい！」" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-He-ZSV">
-                                <rect key="frame" x="34" y="529" width="347" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「このシンプルさが逆にいい！」" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-9u-pvW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「このシンプルさが逆にいい！」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-9u-pvW">
                                 <rect key="frame" x="38" y="637" width="347" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -369,18 +362,18 @@
 という思いをもとに作られた、
 ただ数値を入力するだけのアプリです。</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PzK-yr-qMT">
-                                <rect key="frame" x="38" y="356" width="339" height="177.5"/>
+                                <rect key="frame" x="36" y="356" width="339" height="177.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">このアプリは、使用する皆様の協力が必要です。なぜならば、このアプリには、食材や料理名を入れても自動でカロリーが入力される某アプリのような、素晴らしい機能はないのです。カロリーは皆様ご自身で調べてください。調べた数値をご自身で入力してください。
-
-自分で言っていて恥ずかしくなるような機能ですが、</string>
+                                <string key="text">このアプリは、使用する皆様の協力が必要です。
+例えば、摂取カロリーを管理したければ、食材や料理名を入れても自動でカロリーが入力される某アプリのような、素晴らしい機能はないのです。入力する数値はご自身で入力いただく必要があります。
+ですので、本当に数値を入力するだけの機能ですが、</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vMx-05-bRt">
@@ -390,33 +383,52 @@
                                 <string key="text">と思える日が来るはずです。
 来ないかたは、そう思い込んじゃいましょう。</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大事なことなので2回言いました！" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-AF-dla">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大事なことなので2回言いました！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-AF-dla">
                                 <rect key="frame" x="38" y="687" width="275" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAS-3x-aBV">
-                                <rect key="frame" x="289" y="748" width="74" height="30"/>
+                                <rect key="frame" x="285" y="687" width="74" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="@uchi_dev"/>
                                 <connections>
-                                    <action selector="twitterLinkAction:" destination="Knu-f8-2CQ" eventType="touchUpInside" id="zjs-tI-CHU"/>
+                                    <action selector="twitterLinkAction:" destination="Knu-f8-2CQ" eventType="touchUpInside" id="PyV-pb-Bcc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「このシンプルさが逆にいい！」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-He-ZSV">
+                                <rect key="frame" x="34" y="529" width="347" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zw8-JS-jcb"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="0WH-W4-Jxb"/>
+                    <connections>
+                        <outlet property="text1" destination="1xf-ek-y01" id="FbD-C5-x2l"/>
+                        <outlet property="text2" destination="3W0-o9-8p9" id="ZYK-WA-jRW"/>
+                        <outlet property="text3" destination="aQK-xY-H0Y" id="ffB-Rw-9I9"/>
+                        <outlet property="text4" destination="PzK-yr-qMT" id="sAl-8i-kMy"/>
+                        <outlet property="text5" destination="J8S-He-ZSV" id="hPb-do-3p0"/>
+                        <outlet property="text6" destination="vMx-05-bRt" id="pUQ-C7-5Gw"/>
+                        <outlet property="text7" destination="hlK-9u-pvW" id="93c-Ar-vTL"/>
+                        <outlet property="text8" destination="w4j-AF-dla" id="k98-AE-dYF"/>
+                        <outlet property="titleLabel" destination="IL2-3F-bXW" id="0Cf-Ju-bzi"/>
+                        <outlet property="twitterLinkLabel" destination="FAS-3x-aBV" id="zGC-mx-0im"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xg-YI-NJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2346.376811594203" y="1149.1071428571429"/>
+            <point key="canvasLocation" x="2344.8000000000002" y="1149.0147783251232"/>
         </scene>
         <!--Item-->
         <scene sceneID="JnU-WK-072">
@@ -425,7 +437,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="yKi-yH-4er"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yE9-6g-3pg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -443,7 +455,7 @@
                 <navigationController storyboardIdentifier="RegisterViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="q5L-2D-21R" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VwY-lu-Vcc">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -473,7 +485,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="06S-Ba-OOM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1499" y="423"/>
+            <point key="canvasLocation" x="1585" y="554"/>
         </scene>
     </scenes>
 </document>
