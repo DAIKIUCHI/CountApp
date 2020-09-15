@@ -312,17 +312,6 @@ class MainViewController: UIViewController {
         self.view.addSubview(unitLabel)
     }
     
-    
-    @IBAction func del(_ sender: Any) {
-        
-        UserDefaults.standard.removeObject(forKey: "target")
-        UserDefaults.standard.removeObject(forKey: "count")
-        UserDefaults.standard.removeObject(forKey: "j")
-        UserDefaults.standard.removeObject(forKey: "i")
-        
-    }
-    
-    
     /*
     // MARK: - Navigation
 
