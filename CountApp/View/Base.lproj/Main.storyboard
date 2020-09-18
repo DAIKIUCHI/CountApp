@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex) カロリーコントロールする！！" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-kY-D66">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ex) 水を飲む回数を決める" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mY8-kY-D66">
                                 <rect key="frame" x="62" y="234.66666666666666" width="251" height="33.999999999999972"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -306,7 +306,7 @@
                         <viewLayoutGuide key="safeArea" id="JUa-GF-smi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="4JM-7x-26H"/>
+                    <tabBarItem key="tabBarItem" title="Log" image="lasso" catalog="system" id="4JM-7x-26H"/>
                     <navigationItem key="navigationItem" id="ATC-KW-aCP"/>
                     <connections>
                         <outlet property="count1000plus" destination="YED-hx-qbh" id="oHd-Z8-esf"/>
@@ -325,7 +325,7 @@
             </objects>
             <point key="canvasLocation" x="3055" y="494"/>
         </scene>
-        <!--Item-->
+        <!--Delete-->
         <scene sceneID="8pj-eJ-J0o">
             <objects>
                 <viewController id="gmB-zF-GLh" customClass="DeleteViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -347,7 +347,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="最初からやり直したいとき" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nC0-Xc-gEl">
                                 <rect key="frame" x="31" y="249" width="291" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -362,7 +362,7 @@
                         <viewLayoutGuide key="safeArea" id="RFK-X6-zCN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="yL3-Bu-gfs"/>
+                    <tabBarItem key="tabBarItem" title="Delete" image="trash" catalog="system" id="yL3-Bu-gfs"/>
                     <connections>
                         <outlet property="deleteButton" destination="Pvs-Eb-1nR" id="m4f-tt-Cql"/>
                         <outlet property="message2Label" destination="8Sd-Mz-Mat" id="E2U-e9-aGB"/>
@@ -374,7 +374,7 @@
             </objects>
             <point key="canvasLocation" x="3772" y="980.54187192118229"/>
         </scene>
-        <!--Item-->
+        <!--About-->
         <scene sceneID="WcB-Dn-tYx">
             <objects>
                 <viewController id="Knu-f8-2CQ" customClass="AboutViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -469,7 +469,7 @@
                         <viewLayoutGuide key="safeArea" id="zw8-JS-jcb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="0WH-W4-Jxb"/>
+                    <tabBarItem key="tabBarItem" title="About" image="doc.text" catalog="system" id="0WH-W4-Jxb"/>
                     <connections>
                         <outlet property="text1" destination="1xf-ek-y01" id="FbD-C5-x2l"/>
                         <outlet property="text2" destination="3W0-o9-8p9" id="ZYK-WA-jRW"/>
@@ -548,6 +548,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="doc.text" catalog="system" width="115" height="128"/>
+        <image name="lasso" catalog="system" width="128" height="118"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -29,16 +29,16 @@ class DeleteViewController: UIViewController {
         
         /*-- ラベルデザイン --*/
         //最初からやり直したいとき
-        messageLabel.frame = CGRect(x: view.frame.size.width / 5, y: view.frame.size.height / 3    , width: view.frame.size.width / 1.67, height: view.frame.size.height / 17)
+        messageLabel.frame = CGRect(x: view.frame.size.width / 10, y: view.frame.size.height / 5    , width: view.frame.size.width / 1.25, height: view.frame.size.height / 17)
         //削除後はもとに戻せません
-        message2Label.frame = CGRect(x: view.frame.size.width / 5, y: view.frame.size.height / 2.5    , width: view.frame.size.width / 1.67, height: view.frame.size.height / 17)
+        message2Label.frame = CGRect(x: view.frame.size.width / 5, y: view.frame.size.height / 4.0    , width: view.frame.size.width / 1.67, height: view.frame.size.height / 17)
         
         /*-- データ削除 ボタンデザイン --*/
         deleteButton.layer.borderColor = buttonRGBA.cgColor
-        deleteButton.layer.borderWidth = 1
+        deleteButton.layer.borderWidth = 2
         deleteButton.layer.backgroundColor = .none
         deleteButton.layer.cornerRadius = 5.0
-        deleteButton.frame = CGRect(x: view.frame.size.width / 5, y: view.frame.size.height / 1.8    , width: view.frame.size.width / 1.67, height: view.frame.size.height / 17)
+        deleteButton.frame = CGRect(x: view.frame.size.width / 5, y: view.frame.size.height / 2.2    , width: view.frame.size.width / 1.67, height: view.frame.size.height / 15)
 
 
         // Do any additional setup after loading the view.
