@@ -82,7 +82,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func calorieRestrictionAction(_ sender: Any) {
-        targetTextField.text = "カロリーコントロールする"
+        targetTextField.text = "摂取カロリーを決める"
         //次へボタンを有効化
         nextButton.isEnabled = true
         nextButton.backgroundColor = rgba
