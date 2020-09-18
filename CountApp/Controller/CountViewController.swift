@@ -20,7 +20,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     var alertController: UIAlertController!
     
     var targetStirng = String()
-    let dataList = ["回", "個", "円", "kcal"]
+    let dataList = ["kcal", "円", "回", "個"]
     var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
     var penetrateRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 0.3)
     var backgroundRGBA = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
