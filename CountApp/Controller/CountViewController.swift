@@ -39,22 +39,21 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         //目標画面から目標(targetString)をもってきて代入
         receivedTargetTextLabel.text = targetStirng
-        //pickerで選択された数字を代入
-//        countTextField.text = dataList[0]
     
         /*-- ボタンデザイン --*/
         //角丸
         doneButton.layer.cornerRadius = 5.0
-        //countTextFieldには最初から数字が入っているので通常(ボタン有効)の色
-        doneButton.layer.backgroundColor = rgba.cgColor
+        //countTextFieldに値が入るまでは透過(ボタン無効化の見た目)させておく
+        doneButton.layer.backgroundColor = penetrateRGBA.cgColor
         //ボタンのテキストカラー
         doneButton.setTitleColor(.white, for: .normal)
+        //次へボタンを無効化
+        doneButton.isEnabled = false
     }
     
     
     @IBAction func targetDecisionAction(_ sender: Any) {
 
-        
         /*-- アラート表示設定 --*/
         let alertController:UIAlertController =
             UIAlertController(title:"\(receivedTargetTextLabel.text!)\n\(countTextField.text!)\(unit)まで！",
@@ -116,11 +115,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView,
                     didSelectRow row: Int,
                     inComponent component: Int) {
-//        countTextField.text = dataList[row]
-        
-        unit = dataList[row]
-        doneButton.backgroundColor = rgba
-        doneButton.isEnabled = true
+                unit = dataList[row]
     }
     
         
@@ -129,7 +124,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         //For mobile numer validation
         if textField == countTextField {
-            let allowedCharacters = CharacterSet(charactersIn:"+0123456789 ")//Here change this characters based on your requirement
+            let allowedCharacters = CharacterSet(charactersIn:"+0123456789")
             let characterSet = CharacterSet(charactersIn: string)
             return allowedCharacters.isSuperset(of: characterSet)
         }
