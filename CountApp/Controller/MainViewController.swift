@@ -131,11 +131,43 @@ class MainViewController: UIViewController {
     
     /*-- 回数リセットボタンの処理 --*/
     @IBAction func resetAction(_ sender: Any) {
-        j = 0
-        progress.text = String(j)
-        circle()
-        //アプリ内データの更新
-        UserDefaults.standard.set(j, forKey: "j")
+        
+        /*-- アラート表示設定 --*/
+        let alertController:UIAlertController =
+            UIAlertController(title:"リセットしますか？",
+                              message: nil,
+                              preferredStyle: .alert)
+
+        // Default のaction
+        let defaultAction:UIAlertAction =
+                    UIAlertAction(title: "リセットする！",
+                                  style: .default,
+                          handler:{
+                            (action:UIAlertAction!) -> Void in
+                            
+                            self.j = 0
+                            self.progress.text = String(self.j)
+                            self.circle()
+                            //アプリ内データの更新
+                            UserDefaults.standard.set(self.j, forKey: "j")
+                })
+        
+        // Cancel のaction
+        let cancelAction:UIAlertAction =
+                    UIAlertAction(title: "やっぱりしない！",
+                          style: .cancel,
+                          handler:{
+                            (action:UIAlertAction!) -> Void in
+                            print("元の画面のまま")
+                    })
+        
+        // actionを追加
+        alertController.addAction(cancelAction)
+        alertController.addAction(defaultAction)
+
+        // UIAlertControllerの起動
+        present(alertController, animated: true, completion: nil)
+
     }
     
     // ボタンやラベルのデザインをまとめている
