@@ -271,7 +271,7 @@ class MainViewController: UIViewController {
         // 輪郭の色
         shapeLayer.strokeColor = UIColor(red: 255/255, green: 102/255, blue: 51/255, alpha: 1.0).cgColor
         // 円の中の色
-        shapeLayer.fillColor = UIColor.white.cgColor
+        shapeLayer.fillColor = UIColor.clear.cgColor
         // 輪郭の太さ
         shapeLayer.lineWidth = 15.0
 
@@ -284,13 +284,6 @@ class MainViewController: UIViewController {
         circleEnd = UserDefaults.standard.double(forKey: "count")
         j = UserDefaults.standard.integer(forKey: "j")
         
-        print("---------circleEnd------------")
-        print(circleEnd)
-        print("---------j:Int------------")
-        print(j)
-        print("---------i:Double------------")
-        print(i)
-
         //Double.piの0°が3時。よって270°は12時。12時から開始したいので270を足した後にcountを割る
         let endAngle: CGFloat = CGFloat(Double.pi * 2.0 * (270 + (360 / circleEnd) * Double(j)) / 360.0)
 
@@ -303,54 +296,6 @@ class MainViewController: UIViewController {
         self.view.layer.addSublayer(shapeLayer)
         textAddsubView()
     }
-    // userdefaultsを用意しておく
-//    let UD = UserDefaults.standard
-//    //日付判定関数
-//    func judgeDate(){
-//        //現在のカレンダ情報を設定
-//        let calender = Calendar.current
-//        //日本時間を設定
-//        let now_day = Date(timeIntervalSinceNow: 60 * 60 * 9)
-//        //日付判定結果
-//        var judge = Bool()
-//
-//        // 日時経過チェック
-//        if UserDefaults.standard.object(forKey: "today") != nil {
-//             let past_day = UserDefaults.standard.object(forKey: "today") as! Date
-//             let now = calender.component(.day, from: now_day)
-//             let past = calender.component(.day, from: past_day)
-//
-//             //日にちが変わっていた場合
-//             if now != past {
-//                judge = true
-//             }
-//             else {
-//                judge = false
-//             }
-//         }
-//         //初回実行のみelse
-//         else {
-//             judge = true
-//             /* 今の日時を保存 */
-//             UserDefaults.standard.set(now_day, forKey: "today")
-//         }
-//
-//         /* 日付が変わった場合はtrueの処理 */
-//         if judge == true {
-//            judge = false
-//            //日付が変わった時の処理をここに書く
-//            j = 0
-//            progress.text = String(j)
-//            circle()
-//            //アプリ内データの更新
-//            UserDefaults.standard.set(j, forKey: "j")
-//         }
-//         else {
-//          //日付が変わっていない時の処理をここに書く
-//            print("日付かわってないよ！！！！！！")
-//         }
-//    }
-    
     
     //テキストフィールドを円より前面に表示
     func textAddsubView() {
