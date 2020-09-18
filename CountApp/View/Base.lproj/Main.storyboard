@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--目標設定-->
+        <!--最初に決めること-->
         <scene sceneID="kZI-N0-FIf">
             <objects>
                 <viewController id="ViZ-in-oRA" customClass="RegisterViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -25,7 +25,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IFr-Ja-RBq">
                                 <rect key="frame" x="100" y="599" width="175" height="38"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="次へ"/>
+                                <state key="normal" title="次へ">
+                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="nextAction:" destination="ViZ-in-oRA" eventType="touchUpInside" id="AZ5-yx-CdL"/>
                                 </connections>
@@ -99,7 +101,9 @@
                             <constraint firstItem="g5P-8m-Ijw" firstAttribute="leading" secondItem="llv-Dj-Udk" secondAttribute="leading" constant="62" id="x12-Zc-1oK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="目標設定" id="kjG-c7-h6q"/>
+                    <navigationItem key="navigationItem" title="最初に決めること" id="kjG-c7-h6q">
+                        <barButtonItem key="backBarButtonItem" title="戻る" id="fix-1A-1rM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="calorieRestrictionButton" destination="X0q-dj-j3s" id="AKd-Nd-Ppz"/>
                         <outlet property="moneyLimit" destination="1Xg-EN-Kr8" id="odg-ou-wGH"/>
@@ -147,7 +151,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jXL-uA-HoN">
                                 <rect key="frame" x="90" y="579" width="195" height="38"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="これで決定"/>
+                                <state key="normal" title="これで決定">
+                                    <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="targetDecisionAction:" destination="ARj-Xg-JcF" eventType="touchUpInside" id="1tt-4w-bMz"/>
                                 </connections>

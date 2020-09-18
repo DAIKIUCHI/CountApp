@@ -62,6 +62,16 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // ナビゲージョンアイテムの文字色
+        self.navigationController!.navigationBar.tintColor = .white
+        // ナビゲーションバーのタイトルの文字色
+        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        // ナビゲーションバーの背景色
+        self.navigationController!.navigationBar.barTintColor = rgba
+    }
+    
     
     
     /*-- 間食制限テンプレ挿入ボタン --*/
