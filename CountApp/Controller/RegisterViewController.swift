@@ -72,9 +72,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.navigationController!.navigationBar.barTintColor = rgba
     }
     
-    
-    
-    /*-- 間食制限テンプレ挿入ボタン --*/
+    /*-- テンプレ挿入ボタン --*/
     @IBAction func stopSnackingAction(_ sender: Any) {
         targetTextField.text = "間食していい回数を決める"
         //次へボタンを有効化

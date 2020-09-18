@@ -307,7 +307,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="4JM-7x-26H"/>
-                    <navigationItem key="navigationItem" title="進捗" id="ATC-KW-aCP"/>
+                    <navigationItem key="navigationItem" id="ATC-KW-aCP"/>
                     <connections>
                         <outlet property="count1000plus" destination="YED-hx-qbh" id="oHd-Z8-esf"/>
                         <outlet property="count100plus" destination="Lul-FA-wS3" id="Yhj-ch-AMg"/>
@@ -504,7 +504,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cq5-4F-WQq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="588" y="423"/>
+            <point key="canvasLocation" x="590" y="553"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Ex8-P0-dbR">
@@ -525,12 +525,12 @@
             </objects>
             <point key="canvasLocation" x="589.85507246376812" y="-305.35714285714283"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--ろぐろぐ-->
         <scene sceneID="9gU-eB-4Ms">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yzx-UG-d4A" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="4U4-7Q-y8S"/>
+                    <navigationItem key="navigationItem" title="ろぐろぐ" id="4U4-7Q-y8S"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dzn-cb-Qmt">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

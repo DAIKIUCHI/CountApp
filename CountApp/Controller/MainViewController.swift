@@ -68,6 +68,13 @@ class MainViewController: UIViewController {
         // 円を描画
         circle()
         countCircle()
+        
+        // ナビゲージョンアイテムの文字色
+        self.navigationController!.navigationBar.tintColor = .white
+        // ナビゲーションバーのタイトルの文字色
+        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        // ナビゲーションバーの背景色
+        self.navigationController!.navigationBar.barTintColor = rgba
 
         // progressラベルがnilのときは"0"を表示させる
         if progress.text == nil {
@@ -77,6 +84,16 @@ class MainViewController: UIViewController {
         j = UserDefaults.standard.integer(forKey: "j")
 
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        // ナビゲージョンアイテムの文字色
+//        self.navigationController!.navigationBar.tintColor = .white
+//        // ナビゲーションバーのタイトルの文字色
+//        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+//        // ナビゲーションバーの背景色
+//        self.navigationController!.navigationBar.barTintColor = rgba
+//    }
     
     /* -- 画面遷移操作用※あとで消すやつ -- */
     func save() {
