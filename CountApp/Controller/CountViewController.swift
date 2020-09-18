@@ -15,7 +15,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     @IBOutlet weak var receivedTargetTextLabel: UILabel!
     @IBOutlet weak var doneButton: UIButton!
     
-    var unit:String = "回"
+    var unit:String = "kcal"
     
     var alertController: UIAlertController!
     

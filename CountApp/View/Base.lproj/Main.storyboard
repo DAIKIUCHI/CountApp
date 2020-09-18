@@ -210,6 +210,7 @@
         <!--Main View Controller-->
         <scene sceneID="bTT-Sy-fqD">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TZr-gr-xoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="jlo-sG-aCu" userLabel="Main View Controller" customClass="MainViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Htr-eQ-xlq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
@@ -321,7 +322,6 @@
                         <outlet property="unitLabel" destination="3Oy-h1-wEz" id="EfA-Fy-Etd"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TZr-gr-xoW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3055" y="494"/>
         </scene>
@@ -382,7 +382,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;ろぐろぐ&quot;とは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-3F-bXW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;ログログ&quot;とは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-3F-bXW">
                                 <rect key="frame" x="34" y="108" width="174" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -525,12 +525,12 @@
             </objects>
             <point key="canvasLocation" x="589.85507246376812" y="-305.35714285714283"/>
         </scene>
-        <!--ろぐろぐ-->
+        <!--ログログ-->
         <scene sceneID="9gU-eB-4Ms">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="yzx-UG-d4A" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="ろぐろぐ" id="4U4-7Q-y8S"/>
+                    <navigationItem key="navigationItem" title="ログログ" id="4U4-7Q-y8S"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Dzn-cb-Qmt">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
