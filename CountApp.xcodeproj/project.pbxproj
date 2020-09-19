@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3B78737E2515AFA200CCBECE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78737D2515AFA200CCBECE /* StartViewController.swift */; };
 		3BAF9A3A24AF6C82008C048C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A3924AF6C82008C048C /* SceneDelegate.swift */; };
 		3BAF9A3F24AF6C82008C048C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF9A3D24AF6C82008C048C /* Main.storyboard */; };
 		3BAF9A4124AF6C85008C048C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF9A4024AF6C85008C048C /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3B78737D2515AFA200CCBECE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3BAF9A3424AF6C82008C048C /* CountApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF9A3724AF6C82008C048C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3BAF9A3924AF6C82008C048C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				3BAF9A5724B02201008C048C /* CountViewController.swift */,
 				3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */,
 				3BCB48FD2510EA5300ED27B7 /* DeleteViewController.swift */,
+				3B78737D2515AFA200CCBECE /* StartViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				3BAF9A5A24B08FAA008C048C /* DrawView.swift in Sources */,
 				3BCB48FC250E1CB300ED27B7 /* AboutViewController.swift in Sources */,
 				3BAF9A5124AFFF0C008C048C /* RegisterViewController.swift in Sources */,
+				3B78737E2515AFA200CCBECE /* StartViewController.swift in Sources */,
 				3BAF9A5324AFFFE6008C048C /* MainViewController.swift in Sources */,
 				3BAF9A5824B02201008C048C /* CountViewController.swift in Sources */,
 				3BCB48FE2510EA5300ED27B7 /* DeleteViewController.swift in Sources */,

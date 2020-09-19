@@ -12,7 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
-    let targetViewController: String = "RegisterViewController"
+//    let targetViewController: String = "RegisterViewController"
+    let targetViewController: String = "StartViewController"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
