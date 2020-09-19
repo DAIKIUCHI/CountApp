@@ -17,23 +17,69 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXn-y0-7Jp">
-                                <rect key="frame" x="148" y="376" width="82" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YXn-y0-7Jp">
+                                <rect key="frame" x="50" y="428" width="275" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XEf-i7-OW1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="はじめる"/>
                                 <connections>
                                     <segue destination="q5L-2D-21R" kind="presentation" modalPresentationStyle="fullScreen" id="IZB-ih-nFl"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ログログとは" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pY-AZ-Tr9">
+                                <rect key="frame" x="30" y="144" width="315" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「数えて記録するアプリ」" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOv-7H-aN5">
+                                <rect key="frame" x="30" y="202.66666666666666" width="315" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="です。" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xMP-Ps-RLT">
+                                <rect key="frame" x="302" y="251.33333333333334" width="73" height="28.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="square.and.pencil" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l8e-L5-uP6">
+                                <rect key="frame" x="15" y="246.66666666666669" width="142" height="103.99999999999997"/>
+                                <color key="tintColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105.67" id="LSt-c1-PTR"/>
+                                    <constraint firstAttribute="width" constant="142" id="awh-G1-pPa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zDN-bT-ZlS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zDN-bT-ZlS" firstAttribute="trailing" secondItem="NOv-7H-aN5" secondAttribute="trailing" constant="30" id="0B8-hn-Giv"/>
+                            <constraint firstItem="zDN-bT-ZlS" firstAttribute="trailing" secondItem="2pY-AZ-Tr9" secondAttribute="trailing" constant="30" id="0om-3K-XGt"/>
+                            <constraint firstItem="xMP-Ps-RLT" firstAttribute="top" secondItem="NOv-7H-aN5" secondAttribute="bottom" constant="20" id="2cA-hJ-tVM"/>
+                            <constraint firstItem="YXn-y0-7Jp" firstAttribute="leading" secondItem="zDN-bT-ZlS" secondAttribute="leading" constant="50" id="5hg-Mi-Hgm"/>
+                            <constraint firstItem="l8e-L5-uP6" firstAttribute="top" secondItem="NOv-7H-aN5" secondAttribute="bottom" constant="15" id="Db3-Bq-AMF"/>
+                            <constraint firstItem="NOv-7H-aN5" firstAttribute="leading" secondItem="zDN-bT-ZlS" secondAttribute="leading" constant="30" id="J2u-Kc-I3u"/>
+                            <constraint firstItem="xMP-Ps-RLT" firstAttribute="leading" secondItem="l8e-L5-uP6" secondAttribute="trailing" constant="145" id="KGE-sw-M3r"/>
+                            <constraint firstItem="2pY-AZ-Tr9" firstAttribute="leading" secondItem="zDN-bT-ZlS" secondAttribute="leading" constant="30" id="Vqx-iI-3gE"/>
+                            <constraint firstItem="2pY-AZ-Tr9" firstAttribute="top" secondItem="zDN-bT-ZlS" secondAttribute="top" constant="100" id="WnI-WH-VEB"/>
+                            <constraint firstItem="l8e-L5-uP6" firstAttribute="leading" secondItem="zDN-bT-ZlS" secondAttribute="leading" constant="15" id="rHK-ee-k86"/>
+                            <constraint firstItem="zDN-bT-ZlS" firstAttribute="trailing" secondItem="YXn-y0-7Jp" secondAttribute="trailing" constant="50" id="uhP-jb-HOe"/>
+                            <constraint firstItem="zDN-bT-ZlS" firstAttribute="bottom" secondItem="YXn-y0-7Jp" secondAttribute="bottom" constant="300" id="vRi-YO-x3t"/>
+                            <constraint firstItem="NOv-7H-aN5" firstAttribute="top" secondItem="2pY-AZ-Tr9" secondAttribute="bottom" constant="30" id="vv6-z3-wRf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="startButton" destination="YXn-y0-7Jp" id="d8d-Z3-ff8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nli-Nc-grb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-210" y="-306"/>
+            <point key="canvasLocation" x="-210.40000000000001" y="-306.6502463054187"/>
         </scene>
         <!--最初に決めること-->
         <scene sceneID="kZI-N0-FIf">
@@ -635,6 +681,7 @@
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="lasso" catalog="system" width="128" height="118"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
