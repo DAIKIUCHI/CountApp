@@ -37,6 +37,9 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         //背景色設定
         self.view.backgroundColor = backgroundRGBA
         
+        //数字だけのキーボードを表示
+        self.countTextField.keyboardType = UIKeyboardType.numberPad
+        
         //目標画面から目標(targetString)をもってきて代入
         receivedTargetTextLabel.text = targetStirng
     
