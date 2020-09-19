@@ -26,6 +26,7 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         targetTextField.delegate = self
+        targetTextField.keyboardType = .default
         
         //背景色設定
         self.view.backgroundColor = backgroundRGBA
