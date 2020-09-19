@@ -223,6 +223,9 @@ class MainViewController: UIViewController {
         count1000plus.frame = CGRect(x: view.frame.size.width / 1.6, y: view.frame.size.height / 1.44, width: view.frame.size.width / 5, height: view.frame.size.height / 17)
         
         /*-- リセット ボタンデザイン --*/
+        resetButton.layer.cornerRadius = 5.0
+        resetButton.layer.backgroundColor = rgba.cgColor
+        resetButton.setTitleColor(.white, for: .normal)
         resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 1.53846154, height: view.frame.size.height / 17)
         
     }
