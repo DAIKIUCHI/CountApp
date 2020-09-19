@@ -30,6 +30,12 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         //背景色設定
         self.view.backgroundColor = backgroundRGBA
         
+        // タップを定義
+        let tap = UITapGestureRecognizer(target: self, action: #selector(RegisterViewController.tapAction(_:)))
+        
+        // viewにタップを登録
+        self.view.addGestureRecognizer(tap)
+        
         /*-- ボタンデザイン --*/
         
         /*-- 摂取カロリーを決める --*/
@@ -138,7 +144,13 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         targetTextField.resignFirstResponder()
         return true
     }
-      
+    
+    
+    @IBAction func tapAction(_ sender: UITapGestureRecognizer) {
+        //キーボード閉じる
+        targetTextField.resignFirstResponder()
+    }
+    
     
     /*
     // MARK: - Navigation

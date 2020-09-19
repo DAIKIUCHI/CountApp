@@ -19,6 +19,8 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var alertController: UIAlertController!
     
+    @IBOutlet var tap: UITapGestureRecognizer!
+    
     var targetStirng = String()
     let dataList = ["kcal", "円", "回", "個"]
     var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
@@ -36,6 +38,12 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         
         //背景色設定
         self.view.backgroundColor = backgroundRGBA
+        
+        // タップを定義
+        let tap = UITapGestureRecognizer(target: self, action: #selector(CountViewController.tapAction(_:)))
+        
+        // viewにタップを登録
+        self.view.addGestureRecognizer(tap)
         
         //数字だけのキーボードを表示
         self.countTextField.keyboardType = UIKeyboardType.numberPad
@@ -119,6 +127,8 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
                     didSelectRow row: Int,
                     inComponent component: Int) {
                 unit = dataList[row]
+                //キーボード閉じる
+                countTextField.resignFirstResponder()
     }
     
         
@@ -154,6 +164,14 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countTextField.resignFirstResponder()
         return true
     }
+    
+    
+
+    @IBAction func tapAction(_ sender: UITapGestureRecognizer) {
+        //キーボード閉じる
+        countTextField.resignFirstResponder()
+    }
+    
     /*
     // MARK: - Navigation
 
