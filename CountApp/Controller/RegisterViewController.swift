@@ -31,18 +31,24 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         self.view.backgroundColor = backgroundRGBA
         
         /*-- ボタンデザイン --*/
+        
+        /*-- 摂取カロリーを決める --*/
         //外枠の色
         stopSnackingButton.layer.borderColor = rgba.cgColor
         //外枠の太さ
         stopSnackingButton.layer.borderWidth = 2.0
         //テンプレ挿入ボタン角丸
         stopSnackingButton.layer.cornerRadius = 5.0
+        
+        /*-- 使っていいお金を決める --*/
         //外枠の色
         moneyLimit.layer.borderColor = rgba.cgColor
         //外枠の太さ
         moneyLimit.layer.borderWidth = 2.0
         //テンプレ挿入ボタン角丸
         moneyLimit.layer.cornerRadius = 5.0
+        
+        /*-- 間食していい回数を決める --*/
         //外枠の色
         calorieRestrictionButton.layer.borderColor = rgba.cgColor
         //外枠の太さ
@@ -50,14 +56,14 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         //テンプレ挿入ボタン角丸
         calorieRestrictionButton.layer.cornerRadius = 5.0
         
-        
-        //次へボタン角丸
+        /*-- 次へボタン --*/
+        //角丸
         nextButton.layer.cornerRadius = 5.0
         //テキストフィールドに文字が入るまでは透過(ボタン無効化の見た目)させておく
         nextButton.layer.backgroundColor = penetrateRGBA.cgColor
         //ボタンのテキストカラー
         nextButton.setTitleColor(.white, for: .normal)
-        //次へボタンを無効化
+        //ボタンを無効化
         nextButton.isEnabled = false
 
     }
