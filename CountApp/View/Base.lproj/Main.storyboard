@@ -386,101 +386,133 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="&quot;ログログ&quot;とは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-3F-bXW">
-                                <rect key="frame" x="34" y="108" width="174" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;ログログ&quot;とは" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IL2-3F-bXW">
+                                <rect key="frame" x="30" y="108" width="315" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="※使用上の注意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-xY-H0Y">
-                                <rect key="frame" x="38" y="304" width="170" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="※使用上の注意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-xY-H0Y">
+                                <rect key="frame" x="30" y="280" width="101" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「&quot;なにか&quot;の回数、数値を記録できるアプリ」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-ek-y01">
-                                <rect key="frame" x="27" y="165" width="321" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「&quot;なにか&quot;の回数、数値を記録できるアプリ」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1xf-ek-y01">
+                                <rect key="frame" x="30" y="146" width="315" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「このシンプルさが逆にいい！」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-9u-pvW">
-                                <rect key="frame" x="38" y="637" width="347" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「このシンプルさが逆にいい！」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hlK-9u-pvW">
+                                <rect key="frame" x="30" y="531.66666666666663" width="315" height="19.333333333333371"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3W0-o9-8p9">
-                                <rect key="frame" x="38" y="215" width="339" height="83"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">開発者自身の
-「1日の摂取カロリーを把握しておきたい！」
-という思いをもとに作られた、
-ただ数値を入力するだけのアプリです。</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PzK-yr-qMT">
-                                <rect key="frame" x="36" y="356" width="339" height="177.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">このアプリは、使用する皆様の協力が必要です。
-例えば、摂取カロリーを管理したければ、食材や料理名を入れても自動でカロリーが入力される某アプリのような、素晴らしい機能はないのです。入力する数値はご自身で入力いただく必要があります。
-ですので、本当に数値を入力するだけの機能ですが、</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vMx-05-bRt">
-                                <rect key="frame" x="38" y="579" width="339" height="62"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">と思える日が来るはずです。
-来ないかたは、そう思い込んじゃいましょう。</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="大事なことなので2回言いました！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-AF-dla">
-                                <rect key="frame" x="38" y="687" width="275" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="大事なことなので2回言いました！" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4j-AF-dla">
+                                <rect key="frame" x="30" y="571" width="315" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAS-3x-aBV">
-                                <rect key="frame" x="285" y="687" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="「このシンプルさが逆にいい！」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-He-ZSV">
+                                <rect key="frame" x="30" y="460.33333333333331" width="315" height="19.333333333333314"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ptj-ls-TFB">
+                                <rect key="frame" x="30" y="183" width="315" height="67"/>
+                                <string key="text">開発者自身の
+「1日の摂取カロリーを把握しておきたい！」
+という思いをもとに作られた、
+数を入力するだけのアプリです。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QQy-eC-cWA">
+                                <rect key="frame" x="30" y="308" width="315" height="100.33333333333331"/>
+                                <string key="text">このアプリは、使用する皆様の協力が必要です。
+例えば、摂取カロリーを管理したければ、食材や料理名を入れても自動でカロリーが入力される某アプリのような、素晴らしい機能はないのです。入力する数はご自身で入力いただく必要があります。</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="数を入力するだけのアプリですが、" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2m-Vg-OEl">
+                                <rect key="frame" x="30" y="428.33333333333331" width="315" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="と思える日が来るはずです。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4th-cm-8Yh">
+                                <rect key="frame" x="30" y="494.66666666666669" width="315" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開発者：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skR-yY-KHf">
+                                <rect key="frame" x="210" y="613" width="61.333333333333314" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAS-3x-aBV">
+                                <rect key="frame" x="276.33333333333331" y="606" width="76" height="30"/>
                                 <state key="normal" title="@uchi_dev"/>
                                 <connections>
                                     <action selector="twitterLinkAction:" destination="Knu-f8-2CQ" eventType="touchUpInside" id="PyV-pb-Bcc"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="「このシンプルさが逆にいい！」" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8S-He-ZSV">
-                                <rect key="frame" x="34" y="529" width="347" height="42"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zw8-JS-jcb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="F2m-Vg-OEl" firstAttribute="top" secondItem="QQy-eC-cWA" secondAttribute="bottom" constant="20" id="1Nt-RM-iUo"/>
+                            <constraint firstItem="J8S-He-ZSV" firstAttribute="top" secondItem="F2m-Vg-OEl" secondAttribute="bottom" constant="15" id="2pp-Qi-TTY"/>
+                            <constraint firstItem="IL2-3F-bXW" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="3r6-k2-7yZ"/>
+                            <constraint firstItem="Ptj-ls-TFB" firstAttribute="top" secondItem="1xf-ek-y01" secondAttribute="bottom" constant="20" id="3uR-t0-Rpf"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="w4j-AF-dla" secondAttribute="trailing" constant="30" id="41X-jT-VWU"/>
+                            <constraint firstItem="aQK-xY-H0Y" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="7bQ-CN-RRz"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="F2m-Vg-OEl" secondAttribute="trailing" constant="30" id="8wh-g9-Ib6"/>
+                            <constraint firstItem="4th-cm-8Yh" firstAttribute="top" secondItem="J8S-He-ZSV" secondAttribute="bottom" constant="15" id="9jb-of-1Ln"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="Ptj-ls-TFB" secondAttribute="trailing" constant="30" id="9kQ-4X-jGx"/>
+                            <constraint firstItem="hlK-9u-pvW" firstAttribute="top" secondItem="4th-cm-8Yh" secondAttribute="bottom" constant="20" id="CXv-Kh-iX2"/>
+                            <constraint firstItem="F2m-Vg-OEl" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="DJG-0l-8k2"/>
+                            <constraint firstItem="aQK-xY-H0Y" firstAttribute="top" secondItem="Ptj-ls-TFB" secondAttribute="bottom" constant="30" id="GMO-WE-nPY"/>
+                            <constraint firstItem="FAS-3x-aBV" firstAttribute="top" secondItem="w4j-AF-dla" secondAttribute="bottom" constant="18" id="HOe-9K-uks"/>
+                            <constraint firstItem="skR-yY-KHf" firstAttribute="top" secondItem="w4j-AF-dla" secondAttribute="bottom" constant="25" id="IVG-er-iB5"/>
+                            <constraint firstItem="1xf-ek-y01" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="JQc-rs-gG7"/>
+                            <constraint firstItem="FAS-3x-aBV" firstAttribute="leading" secondItem="skR-yY-KHf" secondAttribute="trailing" constant="5" id="K85-AN-6ti"/>
+                            <constraint firstItem="hlK-9u-pvW" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="NOG-K0-xN5"/>
+                            <constraint firstItem="QQy-eC-cWA" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="Rjs-eu-qGf"/>
+                            <constraint firstItem="skR-yY-KHf" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="210" id="T6g-N0-5M8"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="hlK-9u-pvW" secondAttribute="trailing" constant="30" id="Tca-AG-rjv"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="1xf-ek-y01" secondAttribute="trailing" constant="30" id="U0d-M2-l4Y"/>
+                            <constraint firstItem="4th-cm-8Yh" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="Uyb-Gf-kxc"/>
+                            <constraint firstItem="1xf-ek-y01" firstAttribute="top" secondItem="IL2-3F-bXW" secondAttribute="bottom" constant="20" id="VNf-cU-IeG"/>
+                            <constraint firstAttribute="trailing" secondItem="J8S-He-ZSV" secondAttribute="trailing" constant="30" id="brI-2h-spa"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="IL2-3F-bXW" secondAttribute="trailing" constant="30" id="bs8-gn-Vcd"/>
+                            <constraint firstItem="QQy-eC-cWA" firstAttribute="top" secondItem="aQK-xY-H0Y" secondAttribute="bottom" constant="10" id="c0m-gL-MAg"/>
+                            <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="4th-cm-8Yh" secondAttribute="trailing" constant="30" id="irR-ka-8h9"/>
+                            <constraint firstItem="IL2-3F-bXW" firstAttribute="top" secondItem="zw8-JS-jcb" secondAttribute="top" constant="20" id="jS6-SQ-lvW"/>
+                            <constraint firstAttribute="trailing" secondItem="QQy-eC-cWA" secondAttribute="trailing" constant="30" id="lno-PL-9N5"/>
+                            <constraint firstItem="J8S-He-ZSV" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="pA0-EK-2OW"/>
+                            <constraint firstItem="w4j-AF-dla" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="uxS-dd-ei7"/>
+                            <constraint firstItem="Ptj-ls-TFB" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="wWM-QP-KkF"/>
+                            <constraint firstItem="w4j-AF-dla" firstAttribute="top" secondItem="hlK-9u-pvW" secondAttribute="bottom" constant="20" id="wbY-Qm-U4L"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="About" image="doc.text" catalog="system" id="0WH-W4-Jxb"/>
                     <connections>
                         <outlet property="text1" destination="1xf-ek-y01" id="FbD-C5-x2l"/>
-                        <outlet property="text2" destination="3W0-o9-8p9" id="ZYK-WA-jRW"/>
+                        <outlet property="text2" destination="Ptj-ls-TFB" id="RYa-Fh-ZCT"/>
                         <outlet property="text3" destination="aQK-xY-H0Y" id="ffB-Rw-9I9"/>
-                        <outlet property="text4" destination="PzK-yr-qMT" id="sAl-8i-kMy"/>
+                        <outlet property="text4" destination="QQy-eC-cWA" id="CbM-50-cN1"/>
+                        <outlet property="text4_2" destination="F2m-Vg-OEl" id="iH3-5f-De6"/>
                         <outlet property="text5" destination="J8S-He-ZSV" id="hPb-do-3p0"/>
-                        <outlet property="text6" destination="vMx-05-bRt" id="pUQ-C7-5Gw"/>
+                        <outlet property="text6" destination="4th-cm-8Yh" id="nw9-kR-iRD"/>
                         <outlet property="text7" destination="hlK-9u-pvW" id="93c-Ar-vTL"/>
                         <outlet property="text8" destination="w4j-AF-dla" id="k98-AE-dYF"/>
                         <outlet property="titleLabel" destination="IL2-3F-bXW" id="0Cf-Ju-bzi"/>
@@ -489,7 +521,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xg-YI-NJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2647" y="1297"/>
+            <point key="canvasLocation" x="2645.5999999999999" y="1296.7980295566504"/>
         </scene>
         <!--Item-->
         <scene sceneID="JnU-WK-072">
@@ -555,9 +587,6 @@
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="lasso" catalog="system" width="128" height="118"/>
         <image name="trash" catalog="system" width="121" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
