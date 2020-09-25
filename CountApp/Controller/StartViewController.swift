@@ -10,18 +10,18 @@ import UIKit
 
 class StartViewController: UIViewController {
     
-    
     @IBOutlet weak var startButton: UIButton!
     
-    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
-    var penetrateRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 0.3)
-    var backgroundRGBA = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+    /* --  ログログイメージカラー  -- */
+    let rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+    /* --   基本背景色  -- */
+    let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //背景色設定
-        self.view.backgroundColor = backgroundRGBA
+        /*-- 背景色 --*/
+        self.view.backgroundColor = backGroundColor
         
         /*-- 次へボタン --*/
         //角丸

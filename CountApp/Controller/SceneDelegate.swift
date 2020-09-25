@@ -12,6 +12,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
     
+//    //MainViewControllerから受け取る
+//    var sceneDateArray : [String] = []
+//    var sceneProgressArray : [String] = []
+//    var sceneTargetArray : [String] = []
+    
 //    let targetViewController: String = "RegisterViewController"
     let targetViewController: String = "StartViewController"
 
@@ -25,10 +30,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
 //        print(UserDefaults.standard.object(forKey: "saveContent") as Any)
-        print("-----------目標-------------")
-        print(UserDefaults.standard.object(forKey: "target") as Any)
-        print("-----------回数-------------")
-        print(UserDefaults.standard.object(forKey: "count") as Any)
+//        print("-----------目標-------------")
+//        print(UserDefaults.standard.object(forKey: "target") as Any)
+//        print("-----------回数-------------")
+//        print(UserDefaults.standard.object(forKey: "count") as Any)
         
         //目標が入っていない時は目標設定画面から表示させる
         if UserDefaults.standard.object(forKey: "target") == nil || UserDefaults.standard.object(forKey: "count") == nil {

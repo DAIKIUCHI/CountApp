@@ -10,23 +10,8 @@ import UIKit
 
 class AboutViewController: UIViewController {
     
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var text1: UILabel!
-//    @IBOutlet weak var text2: UITextView!
-    @IBOutlet weak var text2: UILabel!
-    @IBOutlet weak var text3: UILabel!
-//    @IBOutlet weak var text4: UITextView!
-    @IBOutlet weak var text4: UILabel!
-    @IBOutlet weak var text4_2: UILabel!
-    @IBOutlet weak var text5: UILabel!
-//    @IBOutlet weak var text6: UITextView!
-    @IBOutlet weak var text6: UILabel!
-    @IBOutlet weak var text7: UILabel!
-    @IBOutlet weak var text8: UILabel!
-    @IBOutlet weak var twitterLinkLabel: UIButton!
-    
-    
-    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+    /* --  ログログイメージカラー  -- */
+    let rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
 
     override func viewDidLoad() {
         super.viewDidLoad()

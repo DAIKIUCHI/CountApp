@@ -12,52 +12,57 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var targetTextLabel: UILabel!
     @IBOutlet weak var resetButton: UIButton!
-//    @IBOutlet weak var countTapButton: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
     
-    /* --  カウント表示用のテキストラベル  -- */
+    /* --  進捗状況表示用のテキストラベル  -- */
     @IBOutlet weak var progress: UILabel!
     @IBOutlet weak var slash: UILabel!
     @IBOutlet weak var setValue: UILabel!
     @IBOutlet weak var unitLabel: UILabel!
-//    @IBOutlet weak var tap: UILabel!
     
-    
+    /* --  カウントアップボタン  -- */
     @IBOutlet weak var count1plus: UIButton!
     @IBOutlet weak var count10plus: UIButton!
     @IBOutlet weak var count100plus: UIButton!
     @IBOutlet weak var count1000plus: UIButton!
     
-    //countCircle()のインクリメント用
+    /* --  countCircle()のインクリメント用  -- */
     var i:Double = 1.0
-    //円の終わりの位置指定のための計算用変数
+    /* --  円の終わりの位置指定のための計算用変数  -- */
     var circleEnd:Double =  0.0
     
-    //進捗カウントのインクリメント用
+    /* --  進捗カウントのインクリメント用  -- */
     var j = Int()
     
-    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+    /* --  ログログイメージカラー  -- */
+    let rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+    /* --   基本背景色  -- */
+    let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+    
+    /* --  日付取得に使用する定数  -- */
+    let dt = Date()
+    let dateFormatter = DateFormatter()
     
     /*--  viewDidLoad --*/
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Userdefaults取得
         targetTextLabel.text = (UserDefaults.standard.object(forKey: "target") as! String)
         setValue.text = UserDefaults.standard.string(forKey: "count")
         unitLabel.text = UserDefaults.standard.string(forKey: "unit")
         progress.text = UserDefaults.standard.string(forKey: "j")
         
-        //カラー定数宣言
-        let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
-        let buttonRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+        //UserDefaults初期化
+        UserDefaults.standard.register(defaults: ["dateArray" : []])
+        UserDefaults.standard.register(defaults: ["progressArray" : []])
+        UserDefaults.standard.register(defaults: ["targetArray" : []])
         
         //背景色設定
         self.view.backgroundColor = backGroundColor
         
-//        //日付が変更されていたら数値リセット
-//        judgeDate()
-        
         //リセットボタンの見た目
-        resetButton.layer.borderColor = buttonRGBA.cgColor
+        resetButton.layer.borderColor = rgba.cgColor
         resetButton.layer.borderWidth = 1
         resetButton.layer.backgroundColor = .none
         resetButton.layer.cornerRadius = 5.0
@@ -85,20 +90,10 @@ class MainViewController: UIViewController {
 
     }
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        // ナビゲージョンアイテムの文字色
-//        self.navigationController!.navigationBar.tintColor = .white
-//        // ナビゲーションバーのタイトルの文字色
-//        self.navigationController!.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
-//        // ナビゲーションバーの背景色
-//        self.navigationController!.navigationBar.barTintColor = rgba
+//    /* -- 画面遷移操作用※あとで消すやつ -- */
+//    func save() {
+//        UserDefaults.standard.set("保存", forKey: "saveContent")
 //    }
-    
-    /* -- 画面遷移操作用※あとで消すやつ -- */
-    func save() {
-        UserDefaults.standard.set("保存", forKey: "saveContent")
-    }
     
     
     @IBAction func count1Button(_ sender: Any) {
@@ -158,7 +153,6 @@ class MainViewController: UIViewController {
                           style: .cancel,
                           handler:{
                             (action:UIAlertAction!) -> Void in
-                            print("元の画面のまま")
                     })
         
         // actionを追加
@@ -169,6 +163,32 @@ class MainViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
 
     }
+    
+    
+    @IBAction func saveAction(_ sender: Any) {
+        
+        guard var dateArray = UserDefaults.standard.array(forKey: "dateArray"),
+              var progressArray = UserDefaults.standard.array(forKey: "progressArray"),
+              var targetArray = UserDefaults.standard.array(forKey: "targetArray") else {
+            return
+        }
+
+        // DateFormatter を使用して書式とロケールを指定する
+        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd yMdkHm", options: 0, locale: Locale(identifier: "ja_JP"))
+        
+        //配列に追加
+        dateArray.append(dateFormatter.string(from: dt))
+        progressArray.append(progress.text!)
+        targetArray.append(setValue.text!)
+        
+        //それぞれのUserDefaultsにセット
+        UserDefaults.standard.set(dateArray, forKey: "dateArray")
+        UserDefaults.standard.set(progressArray,forKey: "progressArray")
+        UserDefaults.standard.set(targetArray,forKey: "targetArray")
+        
+        
+    }
+    
     
     // ボタンやラベルのデザインをまとめている
     func labelDecoration() {
@@ -226,7 +246,7 @@ class MainViewController: UIViewController {
         resetButton.layer.cornerRadius = 5.0
         resetButton.layer.backgroundColor = rgba.cgColor
         resetButton.setTitleColor(.white, for: .normal)
-        resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 1.53846154, height: view.frame.size.height / 17)
+        resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 4, height: view.frame.size.height / 17)
         
     }
     
@@ -305,7 +325,6 @@ class MainViewController: UIViewController {
         self.view.addSubview(progress)
         self.view.addSubview(slash)
         self.view.addSubview(setValue)
-//        self.view.addSubview(tap)
         self.view.addSubview(unitLabel)
     }
     

@@ -13,14 +13,11 @@ class DeleteViewController: UIViewController {
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var message2Label: UILabel!
-    
-    
-    //カラー定数宣言
+        
+    /* --  ログログイメージカラー  -- */
+    let rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+    /* --   基本背景色  -- */
     let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
-    let buttonRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
-    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +32,6 @@ class DeleteViewController: UIViewController {
         message2Label.frame = CGRect(x: view.frame.size.width / 5, y: view.frame.size.height / 4.0    , width: view.frame.size.width / 1.67, height: view.frame.size.height / 17)
         
         /*-- データ削除 ボタンデザイン --*/
-//        deleteButton.layer.borderColor = buttonRGBA.cgColor
-//        deleteButton.layer.borderWidth = 2
         deleteButton.layer.backgroundColor = rgba.cgColor
         deleteButton.layer.cornerRadius = 5.0
         deleteButton.setTitleColor(.white, for: .normal)
@@ -65,6 +60,9 @@ class DeleteViewController: UIViewController {
                                 UserDefaults.standard.removeObject(forKey: "count")
                                 UserDefaults.standard.removeObject(forKey: "j")
                                 UserDefaults.standard.removeObject(forKey: "i")
+                                UserDefaults.standard.removeObject(forKey: "dateArray")
+                                UserDefaults.standard.removeObject(forKey: "progressArray")
+                                UserDefaults.standard.removeObject(forKey: "targetArray")
 
                                 //画面遷移
                                 self.performSegue(withIdentifier: "delete", sender: nil)
