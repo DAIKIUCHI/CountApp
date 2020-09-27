@@ -59,7 +59,7 @@ class LogTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return view.frame.size.height / 6
+        return view.frame.size.height / 8
     }
     
 
