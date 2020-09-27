@@ -297,13 +297,13 @@ class MainViewController: UIViewController {
         resetButton.layer.cornerRadius = 5.0
         resetButton.layer.backgroundColor = rgba.cgColor
         resetButton.setTitleColor(.white, for: .normal)
-        resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 4, height: view.frame.size.height / 17)
+        resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 3.3, height: view.frame.size.height / 17)
         
         /*-- セーブ ボタンデザイン --*/
         saveButton.layer.cornerRadius = 5.0
         saveButton.layer.backgroundColor = rgba.cgColor
         saveButton.setTitleColor(.white, for: .normal)
-        saveButton.frame = CGRect(x: view.frame.size.width / 1.8, y: view.frame.size.height / 1.25, width: view.frame.size.width / 4, height: view.frame.size.height / 17)
+        saveButton.frame = CGRect(x: view.frame.size.width / 1.9, y: view.frame.size.height / 1.25, width: view.frame.size.width / 3.3, height: view.frame.size.height / 17)
         
     }
     
