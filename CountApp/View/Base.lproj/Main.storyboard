@@ -418,7 +418,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="保存">
+                                <state key="normal" title="記録">
                                     <color key="titleColor" red="1" green="0.4941176471" blue="0.47450980390000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -449,7 +449,7 @@
             </objects>
             <point key="canvasLocation" x="3053.5999999999999" y="493.5960591133005"/>
         </scene>
-        <!--Item-->
+        <!--History-->
         <scene sceneID="sJP-rE-RDG">
             <objects>
                 <tableViewController id="hYh-IX-tYL" customClass="LogTableViewController" customModule="CountApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -510,7 +510,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="9Cl-Of-PFp"/>
+                    <tabBarItem key="tabBarItem" title="History" image="note.text.badge.plus" catalog="system" id="9Cl-Of-PFp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZQ-JX-YJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -777,6 +777,7 @@
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="lasso" catalog="system" width="128" height="118"/>
+        <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">

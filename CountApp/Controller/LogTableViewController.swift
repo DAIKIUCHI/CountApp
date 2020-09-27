@@ -20,7 +20,7 @@ class LogTableViewController: UITableViewController {
         
         let realm = try! Realm()
         self.items = realm.objects(TableItem.self)
-        print(items[0])
+        print(items.count)
 
     }
     

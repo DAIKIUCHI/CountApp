@@ -190,53 +190,59 @@ class MainViewController: UIViewController {
     @IBAction func saveAction(_ sender: Any) {
         
         // モデルクラスをインスタンス化
-         let tableItem:TableItem = TableItem()
+        let tableItem:TableItem = TableItem()
         
-        // DateFormatter を使用して書式とロケールを指定する
-        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd yMdkHm", options: 0, locale: Locale(identifier: "ja_JP"))
+        /*-- アラート表示設定 --*/
+        let alertController:UIAlertController =
+            UIAlertController(title:"ここまでの数字を\n記録しますか？",
+                              message: "※数字はリセットされます",
+                              preferredStyle: .alert)
 
-         // テキストフィールドの名前を突っ込む
-        tableItem.date = dateFormatter.string(from: dt)
-        tableItem.progress = progress.text!
-        tableItem.target = setValue.text! + " " + unitLabel.text!
+        // Default のaction
+        let defaultAction:UIAlertAction =
+                    UIAlertAction(title: "記録する！",
+                                  style: .default,
+                                  handler:{ [self]
+                            (action:UIAlertAction!) -> Void in
+                            
+                            // DateFormatter を使用して書式とロケールを指定する
+                            dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd yMdkHm", options: 0, locale: Locale(identifier: "ja_JP"))
 
-         // Realmデータベースを取得
-         // try!はエラーが発生しなかった場合は通常の値が返されるが、エラーの場合はクラッシュ
-         let realm = try! Realm()
+                             // テキストフィールドの名前を突っ込む
+                            tableItem.date = dateFormatter.string(from: dt)
+                            tableItem.progress = progress.text!
+                            tableItem.target = setValue.text! + " " + unitLabel.text!
 
-         // ⑤・・・Realmインスタンスからaddを叩くと、データベースにレコードが追加される
-         // テキストフィールドの情報をデータベースに追加
-         try! realm.write {
-            realm.add(tableItem)
-         }
+                             // Realmデータベースを取得
+                             let realm = try! Realm()
+
+                             // テキストフィールドの情報をデータベースに追加
+                             try! realm.write {
+                                realm.add(tableItem)
+                             }
+                                    
+                            self.j = 0
+                            self.progress.text = String(self.j)
+                            self.circle()
+                            
+                            print(items)
+                                    
+                })
         
-        print(items)
+        // Cancel のaction
+        let cancelAction:UIAlertAction =
+                    UIAlertAction(title: "やっぱりしない！",
+                          style: .cancel,
+                          handler:{
+                            (action:UIAlertAction!) -> Void in
+                    })
         
-//        print(items)
+        // actionを追加
+        alertController.addAction(cancelAction)
+        alertController.addAction(defaultAction)
 
-//         // テーブルリストを再読み込み
-//         self.テーブル.reloadData()
-
-//
-//        guard var dateArray = UserDefaults.standard.array(forKey: "dateArray"),
-//              var progressArray = UserDefaults.standard.array(forKey: "progressArray"),
-//              var targetArray = UserDefaults.standard.array(forKey: "targetArray") else {
-//            return
-//        }
-//
-//        // DateFormatter を使用して書式とロケールを指定する
-//        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd yMdkHm", options: 0, locale: Locale(identifier: "ja_JP"))
-//
-//        //配列に追加
-//        dateArray.append(dateFormatter.string(from: dt))
-//        progressArray.append(progress.text!)
-//        targetArray.append(setValue.text!)
-//
-//        //それぞれのUserDefaultsにセット
-//        UserDefaults.standard.set(dateArray, forKey: "dateArray")
-//        UserDefaults.standard.set(progressArray,forKey: "progressArray")
-//        UserDefaults.standard.set(targetArray,forKey: "targetArray")
-        
+        // UIAlertControllerの起動
+        present(alertController, animated: true, completion: nil)
         
     }
     
@@ -295,8 +301,8 @@ class MainViewController: UIViewController {
         
         /*-- リセット ボタンデザイン --*/
         resetButton.layer.cornerRadius = 5.0
-        resetButton.layer.backgroundColor = rgba.cgColor
-        resetButton.setTitleColor(.white, for: .normal)
+        resetButton.layer.borderColor = rgba.cgColor
+//        resetButton.setTitleColor(.white, for: .normal)
         resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 3.3, height: view.frame.size.height / 17)
         
         /*-- セーブ ボタンデザイン --*/
