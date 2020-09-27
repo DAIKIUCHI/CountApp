@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class DeleteViewController: UIViewController {
     
@@ -60,9 +61,14 @@ class DeleteViewController: UIViewController {
                                 UserDefaults.standard.removeObject(forKey: "count")
                                 UserDefaults.standard.removeObject(forKey: "j")
                                 UserDefaults.standard.removeObject(forKey: "i")
-                                UserDefaults.standard.removeObject(forKey: "dateArray")
-                                UserDefaults.standard.removeObject(forKey: "progressArray")
-                                UserDefaults.standard.removeObject(forKey: "targetArray")
+//                                UserDefaults.standard.removeObject(forKey: "dateArray")
+//                                UserDefaults.standard.removeObject(forKey: "progressArray")
+//                                UserDefaults.standard.removeObject(forKey: "targetArray")
+                                let realm = try! Realm()
+                                // ファイルは残すが、中身を空っぽに
+                                try! realm.write {
+                                  realm.deleteAll()
+                                }
 
                                 //画面遷移
                                 self.performSegue(withIdentifier: "delete", sender: nil)
