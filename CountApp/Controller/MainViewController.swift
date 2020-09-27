@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class MainViewController: UIViewController {
     
@@ -43,9 +44,25 @@ class MainViewController: UIViewController {
     let dt = Date()
     let dateFormatter = DateFormatter()
     
+    // ②・・・作成したTodoModel型の変数を用意。<TodoModel>という書き方はいわゆるジェネリック
+    //Realmから受け取るデータを突っ込む変数を準備
+    var items: Results<TableItem>!
+    
+//    var LV = LogTableViewController()
+    
     /*--  viewDidLoad --*/
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // ③・・・Realmをインスタンス化
+        // Realmのインスタンスを取得
+        let realm = try! Realm()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        // ④・・・Realmのfunctionでデータを取得。functionを更に追加することで、フィルターもかけられる
+        // Realmデータベースに登録されているデータを全て取得
+        // try!はエラーが発生しなかった場合は通常の値が返されるが、エラーの場合はクラッシュ
+        self.items = realm.objects(TableItem.self)
         
         //Userdefaults取得
         targetTextLabel.text = (UserDefaults.standard.object(forKey: "target") as! String)
@@ -167,24 +184,53 @@ class MainViewController: UIViewController {
     
     @IBAction func saveAction(_ sender: Any) {
         
-        guard var dateArray = UserDefaults.standard.array(forKey: "dateArray"),
-              var progressArray = UserDefaults.standard.array(forKey: "progressArray"),
-              var targetArray = UserDefaults.standard.array(forKey: "targetArray") else {
-            return
-        }
-
+        // モデルクラスをインスタンス化
+         let tableItem:TableItem = TableItem()
+        
         // DateFormatter を使用して書式とロケールを指定する
         dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd yMdkHm", options: 0, locale: Locale(identifier: "ja_JP"))
+
+         // テキストフィールドの名前を突っ込む
+        tableItem.date = dateFormatter.string(from: dt)
+        tableItem.progress = progress.text!
+        tableItem.target = setValue.text! + " " + unitLabel.text!
+
+         // Realmデータベースを取得
+         // try!はエラーが発生しなかった場合は通常の値が返されるが、エラーの場合はクラッシュ
+         let realm = try! Realm()
+
+         // ⑤・・・Realmインスタンスからaddを叩くと、データベースにレコードが追加される
+         // テキストフィールドの情報をデータベースに追加
+         try! realm.write {
+            realm.add(tableItem)
+         }
         
-        //配列に追加
-        dateArray.append(dateFormatter.string(from: dt))
-        progressArray.append(progress.text!)
-        targetArray.append(setValue.text!)
+        print(items)
         
-        //それぞれのUserDefaultsにセット
-        UserDefaults.standard.set(dateArray, forKey: "dateArray")
-        UserDefaults.standard.set(progressArray,forKey: "progressArray")
-        UserDefaults.standard.set(targetArray,forKey: "targetArray")
+//        print(items)
+
+//         // テーブルリストを再読み込み
+//         self.テーブル.reloadData()
+
+//
+//        guard var dateArray = UserDefaults.standard.array(forKey: "dateArray"),
+//              var progressArray = UserDefaults.standard.array(forKey: "progressArray"),
+//              var targetArray = UserDefaults.standard.array(forKey: "targetArray") else {
+//            return
+//        }
+//
+//        // DateFormatter を使用して書式とロケールを指定する
+//        dateFormatter.dateFormat = DateFormatter.dateFormat(fromTemplate: "yyyy-MM-dd yMdkHm", options: 0, locale: Locale(identifier: "ja_JP"))
+//
+//        //配列に追加
+//        dateArray.append(dateFormatter.string(from: dt))
+//        progressArray.append(progress.text!)
+//        targetArray.append(setValue.text!)
+//
+//        //それぞれのUserDefaultsにセット
+//        UserDefaults.standard.set(dateArray, forKey: "dateArray")
+//        UserDefaults.standard.set(progressArray,forKey: "progressArray")
+//        UserDefaults.standard.set(targetArray,forKey: "targetArray")
         
         
     }

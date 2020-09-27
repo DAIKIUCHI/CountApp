@@ -7,31 +7,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LogTableViewController: UITableViewController {
     
-    /*-- それぞれの配列にMainViewControllerの情報を入れていく --*/
-    var dateArray : [String] = []
-    var progressArray : [String] = []
-    var targetArray : [String] = []
+    let MV = MainViewController()
+    
+    var items: Results<TableItem>!
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
+        
+        let realm = try! Realm()
+        self.items = realm.objects(TableItem.self)
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        guard let dateArray = UserDefaults.standard.array(forKey: "dateArray") as? [String],
-              let progressArray = UserDefaults.standard.array(forKey: "progressArray"),
-              let targetArray = UserDefaults.standard.array(forKey: "targetArray") else {
-            return
-        }
-        
-        print(dateArray)
-        print(progressArray)
-        print(targetArray)
         
         tableView.reloadData()
         
@@ -45,27 +37,22 @@ class LogTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        let progressArray = UserDefaults.standard.array(forKey: "progressArray")
-        return progressArray!.count
+        return self.items.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        /*-- tableViewのセル内の項目(UserDefaults)を取得 --*/
-        let dateArray = UserDefaults.standard.array(forKey: "dateArray")
-        let progressArray = UserDefaults.standard.array(forKey: "progressArray")
-        let targetArray = UserDefaults.standard.array(forKey: "targetArray")
+        var date = cell.viewWithTag(1) as! UILabel
+        var progress = cell.viewWithTag(2) as! UILabel
+        var target = cell.viewWithTag(3) as! UILabel
         
-        /*-- 各項目をラベルへ反映 --*/
-        let date = cell.viewWithTag(1) as! UILabel
-        date.text = (dateArray![indexPath.row] as! String)
-        let progress = cell.viewWithTag(2) as! UILabel
-        progress.text = ((progressArray![indexPath.row]) as! String)
-        let target = cell.viewWithTag(3) as! UILabel
-        target.text = (targetArray![indexPath.row] as! String)
+        let tableItem: TableItem = self.items[indexPath.row]
+        
+        date.text = tableItem.date
+        progress.text = tableItem.progress
+        target.text = tableItem.target
         
         return cell
 
