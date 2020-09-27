@@ -83,6 +83,11 @@ class MainViewController: UIViewController {
         resetButton.layer.borderWidth = 1
         resetButton.layer.backgroundColor = .none
         resetButton.layer.cornerRadius = 5.0
+        //セーブボタンの見た目
+        saveButton.layer.borderColor = rgba.cgColor
+        saveButton.layer.borderWidth = 1
+        saveButton.layer.backgroundColor = .none
+        saveButton.layer.cornerRadius = 5.0
         
         // ボタンやラベルのレイアウト
         labelDecoration()
@@ -293,6 +298,12 @@ class MainViewController: UIViewController {
         resetButton.layer.backgroundColor = rgba.cgColor
         resetButton.setTitleColor(.white, for: .normal)
         resetButton.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.25, width: view.frame.size.width / 4, height: view.frame.size.height / 17)
+        
+        /*-- セーブ ボタンデザイン --*/
+        saveButton.layer.cornerRadius = 5.0
+        saveButton.layer.backgroundColor = rgba.cgColor
+        saveButton.setTitleColor(.white, for: .normal)
+        saveButton.frame = CGRect(x: view.frame.size.width / 1.8, y: view.frame.size.height / 1.25, width: view.frame.size.width / 4, height: view.frame.size.height / 17)
         
     }
     
