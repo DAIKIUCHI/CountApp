@@ -23,9 +23,13 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     var targetStirng = String()
     let dataList = ["kcal", "円", "回", "個"]
-    var rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
-    var penetrateRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 0.3)
-    var backgroundRGBA = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+    
+    /* --  ログログイメージカラー  -- */
+    let rgba = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 1.0)
+    /* --   基本背景色  -- */
+    let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+    /* -- ボタン透過用カラー  -- */
+    let penetrateRGBA = UIColor(red: 255/255.0, green: 126/255.0, blue: 121/255.0, alpha: 0.3)
 
     /*-- viewDidLoad --*/
     override func viewDidLoad() {
@@ -37,7 +41,7 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countTextField.delegate = self
         
         //背景色設定
-        self.view.backgroundColor = backgroundRGBA
+        self.view.backgroundColor = backGroundColor
         
         // タップを定義
         let tap = UITapGestureRecognizer(target: self, action: #selector(CountViewController.tapAction(_:)))

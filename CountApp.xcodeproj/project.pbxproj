@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AC842955E96BEB030549E1B /* Pods_CountApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40B61ABE9AE47AFC5345D6F7 /* Pods_CountApp.framework */; };
+		3B016DD3251F8B6600FB4A77 /* ItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B016DD2251F8B6600FB4A77 /* ItemModel.swift */; };
+		3B4C5B902520921E009C5A66 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B4C5B8F2520921D009C5A66 /* DrawView.swift */; };
 		3B78737E2515AFA200CCBECE /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B78737D2515AFA200CCBECE /* StartViewController.swift */; };
 		3BAF9A3A24AF6C82008C048C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A3924AF6C82008C048C /* SceneDelegate.swift */; };
 		3BAF9A3F24AF6C82008C048C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BAF9A3D24AF6C82008C048C /* Main.storyboard */; };
@@ -16,12 +19,15 @@
 		3BAF9A5124AFFF0C008C048C /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5024AFFF0B008C048C /* RegisterViewController.swift */; };
 		3BAF9A5324AFFFE6008C048C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5224AFFFE6008C048C /* MainViewController.swift */; };
 		3BAF9A5824B02201008C048C /* CountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5724B02201008C048C /* CountViewController.swift */; };
-		3BAF9A5A24B08FAA008C048C /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAF9A5924B08FAA008C048C /* DrawView.swift */; };
+		3BB0683B251754C00073D379 /* LogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB0683A251754C00073D379 /* LogTableViewController.swift */; };
 		3BCB48FC250E1CB300ED27B7 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */; };
 		3BCB48FE2510EA5300ED27B7 /* DeleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BCB48FD2510EA5300ED27B7 /* DeleteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1316DAE0DDAEA37A23C55483 /* Pods-CountApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountApp.release.xcconfig"; path = "Target Support Files/Pods-CountApp/Pods-CountApp.release.xcconfig"; sourceTree = "<group>"; };
+		3B016DD2251F8B6600FB4A77 /* ItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ItemModel.swift; path = CountApp/Controller/ItemModel.swift; sourceTree = SOURCE_ROOT; };
+		3B4C5B8F2520921D009C5A66 /* DrawView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
 		3B78737D2515AFA200CCBECE /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		3BAF9A3424AF6C82008C048C /* CountApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BAF9A3724AF6C82008C048C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,9 +39,11 @@
 		3BAF9A5024AFFF0B008C048C /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		3BAF9A5224AFFFE6008C048C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		3BAF9A5724B02201008C048C /* CountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewController.swift; sourceTree = "<group>"; };
-		3BAF9A5924B08FAA008C048C /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		3BB0683A251754C00073D379 /* LogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewController.swift; sourceTree = "<group>"; };
 		3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		3BCB48FD2510EA5300ED27B7 /* DeleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteViewController.swift; sourceTree = "<group>"; };
+		40B61ABE9AE47AFC5345D6F7 /* Pods_CountApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CountApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		996F3DD3778C5FE8EAB771EF /* Pods-CountApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CountApp.debug.xcconfig"; path = "Target Support Files/Pods-CountApp/Pods-CountApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,16 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0AC842955E96BEB030549E1B /* Pods_CountApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0444F2C6ACF98BA2293C0F0A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				996F3DD3778C5FE8EAB771EF /* Pods-CountApp.debug.xcconfig */,
+				1316DAE0DDAEA37A23C55483 /* Pods-CountApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		3BAF9A2B24AF6C82008C048C = {
 			isa = PBXGroup;
 			children = (
 				3BAF9A3624AF6C82008C048C /* CountApp */,
+				0444F2C6ACF98BA2293C0F0A /* Pods */,
+				450180D16D9A174B2BDD0DCE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,6 +100,7 @@
 		3BAF9A5424B0212F008C048C /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3B016DD2251F8B6600FB4A77 /* ItemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,14 +121,23 @@
 				3BAF9A3724AF6C82008C048C /* AppDelegate.swift */,
 				3BAF9A3924AF6C82008C048C /* SceneDelegate.swift */,
 				3BAF9A5224AFFFE6008C048C /* MainViewController.swift */,
-				3BAF9A5924B08FAA008C048C /* DrawView.swift */,
 				3BAF9A5024AFFF0B008C048C /* RegisterViewController.swift */,
 				3BAF9A5724B02201008C048C /* CountViewController.swift */,
 				3BCB48FB250E1CB300ED27B7 /* AboutViewController.swift */,
 				3BCB48FD2510EA5300ED27B7 /* DeleteViewController.swift */,
+				3B4C5B8F2520921D009C5A66 /* DrawView.swift */,
 				3B78737D2515AFA200CCBECE /* StartViewController.swift */,
+				3BB0683A251754C00073D379 /* LogTableViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		450180D16D9A174B2BDD0DCE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40B61ABE9AE47AFC5345D6F7 /* Pods_CountApp.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3BAF9A4824AF6C85008C048C /* Build configuration list for PBXNativeTarget "CountApp" */;
 			buildPhases = (
+				0C7D6E4D73826B4A9B26ACE9 /* [CP] Check Pods Manifest.lock */,
 				3BAF9A3024AF6C82008C048C /* Sources */,
 				3BAF9A3124AF6C82008C048C /* Frameworks */,
 				3BAF9A3224AF6C82008C048C /* Resources */,
+				D5E9EF1EF885AC1FE3C5062E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +208,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C7D6E4D73826B4A9B26ACE9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CountApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5E9EF1EF885AC1FE3C5062E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CountApp/Pods-CountApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CountApp/Pods-CountApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CountApp/Pods-CountApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3BAF9A3024AF6C82008C048C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -183,7 +257,9 @@
 			files = (
 				3BAF9A4F24AF7F30008C048C /* AppDelegate.swift in Sources */,
 				3BAF9A3A24AF6C82008C048C /* SceneDelegate.swift in Sources */,
-				3BAF9A5A24B08FAA008C048C /* DrawView.swift in Sources */,
+				3B4C5B902520921E009C5A66 /* DrawView.swift in Sources */,
+				3BB0683B251754C00073D379 /* LogTableViewController.swift in Sources */,
+				3B016DD3251F8B6600FB4A77 /* ItemModel.swift in Sources */,
 				3BCB48FC250E1CB300ED27B7 /* AboutViewController.swift in Sources */,
 				3BAF9A5124AFFF0C008C048C /* RegisterViewController.swift in Sources */,
 				3B78737E2515AFA200CCBECE /* StartViewController.swift in Sources */,
@@ -265,7 +341,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -319,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -331,19 +407,25 @@
 		};
 		3BAF9A4924AF6C85008C048C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 996F3DD3778C5FE8EAB771EF /* Pods-CountApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = AHPW8FT22H;
 				INFOPLIST_FILE = CountApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.log.loglogApp;
+=======
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uchiude.CountApp;
+>>>>>>> tableview
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -352,19 +434,25 @@
 		};
 		3BAF9A4A24AF6C85008C048C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1316DAE0DDAEA37A23C55483 /* Pods-CountApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1.0.0;
 				DEVELOPMENT_TEAM = AHPW8FT22H;
 				INFOPLIST_FILE = CountApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+<<<<<<< HEAD
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.log.loglogApp;
+=======
+				MARKETING_VERSION = 1.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.uchiude.CountApp;
+>>>>>>> tableview
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
