@@ -510,7 +510,7 @@
                             </tableViewCell>
                         </prototypes>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="History" image="note.text.badge.plus" catalog="system" id="9Cl-Of-PFp"/>
+                    <tabBarItem key="tabBarItem" title="History" image="doc.text" catalog="system" id="9Cl-Of-PFp"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NZQ-JX-YJj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -639,19 +639,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="開発者：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="skR-yY-KHf">
-                                <rect key="frame" x="210" y="596.33333333333337" width="61.333333333333314" height="18"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAS-3x-aBV">
-                                <rect key="frame" x="276.33333333333331" y="589.33333333333337" width="76" height="30"/>
-                                <state key="normal" title="@uchi_dev"/>
-                                <connections>
-                                    <action selector="twitterLinkAction:" destination="Knu-f8-2CQ" eventType="touchUpInside" id="PyV-pb-Bcc"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zw8-JS-jcb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -668,13 +655,9 @@
                             <constraint firstItem="hlK-9u-pvW" firstAttribute="top" secondItem="4th-cm-8Yh" secondAttribute="bottom" constant="20" id="CXv-Kh-iX2"/>
                             <constraint firstItem="F2m-Vg-OEl" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="DJG-0l-8k2"/>
                             <constraint firstItem="aQK-xY-H0Y" firstAttribute="top" secondItem="Ptj-ls-TFB" secondAttribute="bottom" constant="30" id="GMO-WE-nPY"/>
-                            <constraint firstItem="FAS-3x-aBV" firstAttribute="top" secondItem="w4j-AF-dla" secondAttribute="bottom" constant="18" id="HOe-9K-uks"/>
-                            <constraint firstItem="skR-yY-KHf" firstAttribute="top" secondItem="w4j-AF-dla" secondAttribute="bottom" constant="25" id="IVG-er-iB5"/>
                             <constraint firstItem="1xf-ek-y01" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="JQc-rs-gG7"/>
-                            <constraint firstItem="FAS-3x-aBV" firstAttribute="leading" secondItem="skR-yY-KHf" secondAttribute="trailing" constant="5" id="K85-AN-6ti"/>
                             <constraint firstItem="hlK-9u-pvW" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="NOG-K0-xN5"/>
                             <constraint firstItem="QQy-eC-cWA" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="Rjs-eu-qGf"/>
-                            <constraint firstItem="skR-yY-KHf" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="210" id="T6g-N0-5M8"/>
                             <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="hlK-9u-pvW" secondAttribute="trailing" constant="30" id="Tca-AG-rjv"/>
                             <constraint firstItem="zw8-JS-jcb" firstAttribute="trailing" secondItem="1xf-ek-y01" secondAttribute="trailing" constant="30" id="U0d-M2-l4Y"/>
                             <constraint firstItem="4th-cm-8Yh" firstAttribute="leading" secondItem="zw8-JS-jcb" secondAttribute="leading" constant="30" id="Uyb-Gf-kxc"/>
@@ -691,7 +674,7 @@
                             <constraint firstItem="w4j-AF-dla" firstAttribute="top" secondItem="hlK-9u-pvW" secondAttribute="bottom" constant="20" id="wbY-Qm-U4L"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="About" image="doc.text" catalog="system" id="0WH-W4-Jxb"/>
+                    <tabBarItem key="tabBarItem" title="About" image="line.horizontal.3" catalog="system" id="0WH-W4-Jxb"/>
                     <connections>
                         <outlet property="text1" destination="1xf-ek-y01" id="FbD-C5-x2l"/>
                         <outlet property="text2" destination="Ptj-ls-TFB" id="RYa-Fh-ZCT"/>
@@ -703,7 +686,6 @@
                         <outlet property="text7" destination="hlK-9u-pvW" id="93c-Ar-vTL"/>
                         <outlet property="text8" destination="w4j-AF-dla" id="k98-AE-dYF"/>
                         <outlet property="titleLabel" destination="IL2-3F-bXW" id="0Cf-Ju-bzi"/>
-                        <outlet property="twitterLinkLabel" destination="FAS-3x-aBV" id="zGC-mx-0im"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Xg-YI-NJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -777,7 +759,7 @@
     <resources>
         <image name="doc.text" catalog="system" width="115" height="128"/>
         <image name="lasso" catalog="system" width="128" height="118"/>
-        <image name="note.text.badge.plus" catalog="system" width="128" height="108"/>
+        <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="systemBackgroundColor">
