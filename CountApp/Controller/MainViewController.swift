@@ -224,6 +224,9 @@ class MainViewController: UIViewController {
                             self.j = 0
                             self.progress.text = String(self.j)
                             self.circle()
+                            //アプリ内データの更新
+                            UserDefaults.standard.set(self.j, forKey: "j")
+                            
                             
                             print(items)
                                     
