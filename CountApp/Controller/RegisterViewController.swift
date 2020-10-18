@@ -30,6 +30,9 @@ class RegisterViewController: UIViewController, UITextFieldDelegate {
         
         targetTextField.delegate = self
         targetTextField.keyboardType = .default
+        targetTextField.layer.borderWidth = 1.0
+        targetTextField.layer.cornerRadius = 3.0
+        targetTextField.layer.borderColor = UIColor.lightGray.cgColor
         
         //背景色設定
         self.view.backgroundColor = backGroundColor

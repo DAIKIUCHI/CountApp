@@ -15,12 +15,18 @@ class LogTableViewController: UITableViewController {
     
     var items: Results<TableItem>!
     
+    /* --   基本背景色  -- */
+    let backGroundColor = UIColor(red: 245/255, green: 245/255, blue: 245/255, alpha: 1)
+    
     override func viewDidLoad() {
         super.viewDidLoad() 
         
         let realm = try! Realm()
         self.items = realm.objects(TableItem.self)
         print(items.count)
+        
+        //背景色設定
+        self.view.backgroundColor = backGroundColor
 
     }
     

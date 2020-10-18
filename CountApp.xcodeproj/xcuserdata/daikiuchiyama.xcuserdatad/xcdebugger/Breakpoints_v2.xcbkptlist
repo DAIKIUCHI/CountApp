@@ -14,10 +14,10 @@
             filePath = "CountApp/Controller/MainViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "263"
-            endingLineNumber = "263"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "272"
+            endingLineNumber = "272"
+            landmarkName = "labelDecoration()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

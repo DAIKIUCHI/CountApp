@@ -40,6 +40,11 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
         countPickerView.dataSource = self
         countTextField.delegate = self
         
+        countTextField.keyboardType = .default
+        countTextField.layer.borderWidth = 1.0
+        countTextField.layer.cornerRadius = 3.0
+        countTextField.layer.borderColor = UIColor.lightGray.cgColor
+        
         //背景色設定
         self.view.backgroundColor = backGroundColor
         
@@ -118,13 +123,19 @@ class CountViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     // UIPickerViewに表示する配列
-    func pickerView(_ pickerView: UIPickerView,
-                    titleForRow row: Int,
-                    forComponent component: Int) -> String? {
-        
-        return dataList[row]
-    }
+//    func pickerView(_ pickerView: UIPickerView,
+//                    titleForRow row: Int,
+//                    forComponent component: Int) -> String? {
+//
+//        return dataList[row]
+//    }
     
+    // UIPickerViewに表示する配列
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+
+        let string = dataList[row]
+        return NSAttributedString(string: string, attributes: [NSAttributedString.Key.foregroundColor: UIColor.black])
+    }
     
     // UIPickerViewのRowが選択された時の挙動
     func pickerView(_ pickerView: UIPickerView,

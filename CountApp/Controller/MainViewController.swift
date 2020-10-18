@@ -23,6 +23,7 @@ class MainViewController: UIViewController {
     
     /* --  カウントアップボタン  -- */
     @IBOutlet weak var count1plus: UIButton!
+    @IBOutlet weak var count5plus: UIButton!
     @IBOutlet weak var count10plus: UIButton!
     @IBOutlet weak var count100plus: UIButton!
     @IBOutlet weak var count1000plus: UIButton!
@@ -124,6 +125,14 @@ class MainViewController: UIViewController {
         UserDefaults.standard.set(j, forKey: "j")
         countCircle()
     }
+    
+    @IBAction func count5Button(_ sender: Any) {
+        j += 5
+        progress.text = String(j)
+        UserDefaults.standard.set(j, forKey: "j")
+        countCircle()
+    }
+    
     
     @IBAction func count10Button(_ sender: Any) {
         j += 10
@@ -269,7 +278,17 @@ class MainViewController: UIViewController {
         //テンプレ挿入ボタン角丸
         count1plus.layer.cornerRadius = 5.0
         //枠のサイズ
-        count1plus.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.63, width: view.frame.size.width / 1.53846154, height: view.frame.size.height / 17)
+        count1plus.frame = CGRect(x: view.frame.size.width / 5.71428571, y: view.frame.size.height / 1.63, width: view.frame.size.width / 3.2, height: view.frame.size.height / 17)
+        
+        /*-- +5 ボタンデザイン --*/
+        //外枠の色
+        count5plus.layer.borderColor = rgba.cgColor
+        //外枠の太さ
+        count5plus.layer.borderWidth = 2.0
+        //テンプレ挿入ボタン角丸
+        count5plus.layer.cornerRadius = 5.0
+        //枠のサイズ
+        count5plus.frame = CGRect(x: view.frame.size.width / 1.95, y: view.frame.size.height / 1.63, width: view.frame.size.width / 3.2, height: view.frame.size.height / 17)
         
         /*-- +10 ボタンデザイン --*/
         //外枠の色
